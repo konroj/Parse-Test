@@ -1,0 +1,62 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>SchemeUserState</key>
+	<dict>
+		<key>Bolts.xcscheme</key>
+		<dict>
+			<key>isShown</key>
+			<false/>
+		</dict>
+		<key>LGSideMenuController.xcscheme</key>
+		<dict>
+			<key>isShown</key>
+			<false/>
+		</dict>
+		<key>Masonry.xcscheme</key>
+		<dict>
+			<key>isShown</key>
+			<false/>
+		</dict>
+		<key>Parse.xcscheme</key>
+		<dict>
+			<key>isShown</key>
+			<false/>
+		</dict>
+		<key>Pods-Fitsei.xcscheme</key>
+		<dict>
+			<key>isShown</key>
+			<false/>
+		</dict>
+	</dict>
+	<key>SuppressBuildableAutocreation</key>
+	<dict>
+		<key>15E2EAE86719803FDB87F772797E0F6B</key>
+		<dict>
+			<key>primary</key>
+			<true/>
+		</dict>
+		<key>54F3B353FAD1BEC8861B569205402F0E</key>
+		<dict>
+			<key>primary</key>
+			<true/>
+		</dict>
+		<key>628CFFA2EF986A6778E19E2C703191D8</key>
+		<dict>
+			<key>primary</key>
+			<true/>
+		</dict>
+		<key>BE6BAACAEFD3D721F10472792B220E35</key>
+		<dict>
+			<key>primary</key>
+			<true/>
+		</dict>
+		<key>CFF3BF8638A11F26220F4BFD5720C503</key>
+		<dict>
+			<key>primary</key>
+			<true/>
+		</dict>
+	</dict>
+</dict>
+</plist>

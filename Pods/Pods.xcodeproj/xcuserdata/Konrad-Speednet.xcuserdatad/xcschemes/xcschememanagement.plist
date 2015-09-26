@@ -1,0 +1,52 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>SchemeUserState</key>
+	<dict>
+		<key>Bolts.xcscheme</key>
+		<dict>
+			<key>isShown</key>
+			<false/>
+		</dict>
+		<key>LGSideMenuController.xcscheme</key>
+		<dict>
+			<key>isShown</key>
+			<false/>
+		</dict>
+		<key>Parse.xcscheme</key>
+		<dict>
+			<key>isShown</key>
+			<false/>
+		</dict>
+		<key>Pods-Fitsei.xcscheme</key>
+		<dict>
+			<key>isShown</key>
+			<false/>
+		</dict>
+	</dict>
+	<key>SuppressBuildableAutocreation</key>
+	<dict>
+		<key>1A0E7F87365C21FC8B0660BDA90A671C</key>
+		<dict>
+			<key>primary</key>
+			<true/>
+		</dict>
+		<key>2674F6D4A5C36E5DFD5DA995E4CA5D42</key>
+		<dict>
+			<key>primary</key>
+			<true/>
+		</dict>
+		<key>508B6D49D790B88917363B31EEF621C2</key>
+		<dict>
+			<key>primary</key>
+			<true/>
+		</dict>
+		<key>F1536AAE45F2E95B7B7E66E572234F10</key>
+		<dict>
+			<key>primary</key>
+			<true/>
+		</dict>
+	</dict>
+</dict>
+</plist>

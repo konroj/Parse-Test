@@ -1,0 +1,665 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		092354B313A1D7EB00DA740F /* CFNetwork.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 092354B213A1D7EB00DA740F /* CFNetwork.framework */; };
+		092354B513A1D7F000DA740F /* SystemConfiguration.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 092354B413A1D7F000DA740F /* SystemConfiguration.framework */; };
+		095ACE8613C68EA300566243 /* AudioToolbox.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 095ACE8513C68EA300566243 /* AudioToolbox.framework */; };
+		099CCEAD13F9E3760039A464 /* libz.1.1.3.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = 099CCEAC13F9E3760039A464 /* libz.1.1.3.dylib */; };
+		09ABC07213A1D52D009C3FCF /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 09ABC07113A1D52D009C3FCF /* UIKit.framework */; };
+		09ABC07413A1D52D009C3FCF /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 09ABC07313A1D52D009C3FCF /* Foundation.framework */; };
+		09ABC07F13A1D52D009C3FCF /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 09ABC07E13A1D52D009C3FCF /* main.m */; };
+		09ABC08213A1D52D009C3FCF /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 09ABC08113A1D52D009C3FCF /* AppDelegate.m */; };
+		09BEF34C13D51C3F001BBCDB /* Security.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 09BEF34B13D51C3F001BBCDB /* Security.framework */; };
+		241141AD1BB55A0E0039591B /* FITDrawerViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 241141AC1BB55A0E0039591B /* FITDrawerViewController.m */; };
+		241141AF1BB55A850039591B /* DrawerStoryboard.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 241141AE1BB55A850039591B /* DrawerStoryboard.storyboard */; };
+		24DF63D61BB55F6D00A1B62F /* FITLeftMenuViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 24DF63D51BB55F6D00A1B62F /* FITLeftMenuViewController.m */; };
+		24DF63D91BB55F7A00A1B62F /* FITRightMenuViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 24DF63D81BB55F7A00A1B62F /* FITRightMenuViewController.m */; };
+		24DF63DE1BB5606D00A1B62F /* FITLeftMenuTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 24DF63DD1BB5606D00A1B62F /* FITLeftMenuTableViewCell.m */; };
+		24DF63E11BB5607600A1B62F /* FITRightMenuTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 24DF63E01BB5607600A1B62F /* FITRightMenuTableViewCell.m */; };
+		24DF63E61BB5615B00A1B62F /* FITHomeViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 24DF63E51BB5615B00A1B62F /* FITHomeViewController.m */; };
+		24DF63EA1BB5721700A1B62F /* FITNavigationViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 24DF63E91BB5721700A1B62F /* FITNavigationViewController.m */; };
+		24DF63ED1BB5736200A1B62F /* FITBaseViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 24DF63EC1BB5736200A1B62F /* FITBaseViewController.m */; };
+		24DF63EF1BB577FC00A1B62F /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 24DF63EE1BB577FC00A1B62F /* Images.xcassets */; };
+		24DF63F21BB579EF00A1B62F /* UIImageEffects.m in Sources */ = {isa = PBXBuildFile; fileRef = 24DF63F11BB579EF00A1B62F /* UIImageEffects.m */; };
+		24DF63F41BB57AA300A1B62F /* Accelerate.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 24DF63F31BB57AA300A1B62F /* Accelerate.framework */; };
+		2FCDD6B014A573F500295AAC /* QuartzCore.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 2FCDD6AF14A573F500295AAC /* QuartzCore.framework */; };
+		4998650515BF305000803E05 /* StoreKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 4998650415BF305000803E05 /* StoreKit.framework */; };
+		743D7B6D157DA60100084B67 /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 743D7B6C157DA60100084B67 /* CoreGraphics.framework */; };
+		797ED7F21BB5AA2E004420AC /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 797ED7F11BB5AA2E004420AC /* LaunchScreen.storyboard */; settings = {ASSET_TAGS = (); }; };
+		797ED7F61BB5BFC8004420AC /* FITHomeCollectionViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 797ED7F51BB5BFC8004420AC /* FITHomeCollectionViewCell.m */; settings = {ASSET_TAGS = (); }; };
+		797ED7FA1BB5E663004420AC /* FITHomeFlowLayout.m in Sources */ = {isa = PBXBuildFile; fileRef = 797ED7F91BB5E663004420AC /* FITHomeFlowLayout.m */; settings = {ASSET_TAGS = (); }; };
+		797ED7FD1BB5F3A6004420AC /* UIColor+Hex.m in Sources */ = {isa = PBXBuildFile; fileRef = 797ED7FC1BB5F3A6004420AC /* UIColor+Hex.m */; settings = {ASSET_TAGS = (); }; };
+		797ED8001BB5FDA5004420AC /* FITLogoTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 797ED7FF1BB5FDA5004420AC /* FITLogoTableViewCell.m */; settings = {ASSET_TAGS = (); }; };
+		797ED8041BB616BC004420AC /* FITPlanViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 797ED8031BB616BC004420AC /* FITPlanViewController.m */; settings = {ASSET_TAGS = (); }; };
+		797ED8071BB61B9F004420AC /* FITBigPlanCollectionViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 797ED8061BB61B9F004420AC /* FITBigPlanCollectionViewCell.m */; settings = {ASSET_TAGS = (); }; };
+		797ED80A1BB61BB4004420AC /* FITSmallPlanCollectionViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 797ED8091BB61BB4004420AC /* FITSmallPlanCollectionViewCell.m */; settings = {ASSET_TAGS = (); }; };
+		797ED80D1BB6232C004420AC /* FITBigPlanFlowLayout.m in Sources */ = {isa = PBXBuildFile; fileRef = 797ED80C1BB6232B004420AC /* FITBigPlanFlowLayout.m */; settings = {ASSET_TAGS = (); }; };
+		797ED8111BB64153004420AC /* FITShoppingViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 797ED8101BB64153004420AC /* FITShoppingViewController.m */; settings = {ASSET_TAGS = (); }; };
+		797ED8151BB650A4004420AC /* FITShoppingProductTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 797ED8141BB650A4004420AC /* FITShoppingProductTableViewCell.m */; settings = {ASSET_TAGS = (); }; };
+		797ED8181BB653D7004420AC /* FITShoppingHeaderView.m in Sources */ = {isa = PBXBuildFile; fileRef = 797ED8171BB653D7004420AC /* FITShoppingHeaderView.m */; settings = {ASSET_TAGS = (); }; };
+		797ED81C1BB68326004420AC /* FITDietPlanPresenter.m in Sources */ = {isa = PBXBuildFile; fileRef = 797ED81B1BB68326004420AC /* FITDietPlanPresenter.m */; settings = {ASSET_TAGS = (); }; };
+		797ED8201BB69A7E004420AC /* FITSettingsViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 797ED81F1BB69A7E004420AC /* FITSettingsViewController.m */; settings = {ASSET_TAGS = (); }; };
+		814C3AC01B69864600E307BB /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 814C3AB51B69864600E307BB /* InfoPlist.strings */; };
+		81A6CA611A2EA82800297C39 /* libstdc++.6.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = 81A6CA601A2EA82800297C39 /* libstdc++.6.dylib */; };
+		81AFA6791B0EDD12000763C0 /* libsqlite3.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = 6332375315E438E900AE2736 /* libsqlite3.dylib */; };
+		BF629374FF6852A21B032A2D /* libPods-Fitsei.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 2C8B0AC098B081976A298989 /* libPods-Fitsei.a */; };
+		DD952FCB16E7F5CF00470144 /* CoreLocation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 97E18B1E1624CB5700B17A67 /* CoreLocation.framework */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXFileReference section */
+		092354B213A1D7EB00DA740F /* CFNetwork.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CFNetwork.framework; path = System/Library/Frameworks/CFNetwork.framework; sourceTree = SDKROOT; };
+		092354B413A1D7F000DA740F /* SystemConfiguration.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SystemConfiguration.framework; path = System/Library/Frameworks/SystemConfiguration.framework; sourceTree = SDKROOT; };
+		095ACE8513C68EA300566243 /* AudioToolbox.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AudioToolbox.framework; path = System/Library/Frameworks/AudioToolbox.framework; sourceTree = SDKROOT; };
+		099CCEAC13F9E3760039A464 /* libz.1.1.3.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; name = libz.1.1.3.dylib; path = usr/lib/libz.1.1.3.dylib; sourceTree = SDKROOT; };
+		09ABC06D13A1D52D009C3FCF /* Fitsei.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Fitsei.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		09ABC07113A1D52D009C3FCF /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = System/Library/Frameworks/UIKit.framework; sourceTree = SDKROOT; };
+		09ABC07313A1D52D009C3FCF /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
+		09ABC07E13A1D52D009C3FCF /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
+		09ABC08013A1D52D009C3FCF /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
+		09ABC08113A1D52D009C3FCF /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
+		09BEF34B13D51C3F001BBCDB /* Security.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Security.framework; path = System/Library/Frameworks/Security.framework; sourceTree = SDKROOT; };
+		241141AB1BB55A0E0039591B /* FITDrawerViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FITDrawerViewController.h; sourceTree = "<group>"; };
+		241141AC1BB55A0E0039591B /* FITDrawerViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FITDrawerViewController.m; sourceTree = "<group>"; };
+		241141AE1BB55A850039591B /* DrawerStoryboard.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = DrawerStoryboard.storyboard; sourceTree = "<group>"; };
+		241141B51BB55D390039591B /* FITPrefixHeader.pch */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FITPrefixHeader.pch; sourceTree = "<group>"; };
+		24DF63D41BB55F6D00A1B62F /* FITLeftMenuViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FITLeftMenuViewController.h; sourceTree = "<group>"; };
+		24DF63D51BB55F6D00A1B62F /* FITLeftMenuViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FITLeftMenuViewController.m; sourceTree = "<group>"; };
+		24DF63D71BB55F7A00A1B62F /* FITRightMenuViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FITRightMenuViewController.h; sourceTree = "<group>"; };
+		24DF63D81BB55F7A00A1B62F /* FITRightMenuViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FITRightMenuViewController.m; sourceTree = "<group>"; };
+		24DF63DC1BB5606D00A1B62F /* FITLeftMenuTableViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FITLeftMenuTableViewCell.h; sourceTree = "<group>"; };
+		24DF63DD1BB5606D00A1B62F /* FITLeftMenuTableViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FITLeftMenuTableViewCell.m; sourceTree = "<group>"; };
+		24DF63DF1BB5607600A1B62F /* FITRightMenuTableViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FITRightMenuTableViewCell.h; sourceTree = "<group>"; };
+		24DF63E01BB5607600A1B62F /* FITRightMenuTableViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FITRightMenuTableViewCell.m; sourceTree = "<group>"; };
+		24DF63E21BB560E400A1B62F /* Consts.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = Consts.h; sourceTree = "<group>"; };
+		24DF63E41BB5615B00A1B62F /* FITHomeViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FITHomeViewController.h; sourceTree = "<group>"; };
+		24DF63E51BB5615B00A1B62F /* FITHomeViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FITHomeViewController.m; sourceTree = "<group>"; };
+		24DF63E81BB5721700A1B62F /* FITNavigationViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FITNavigationViewController.h; sourceTree = "<group>"; };
+		24DF63E91BB5721700A1B62F /* FITNavigationViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FITNavigationViewController.m; sourceTree = "<group>"; };
+		24DF63EB1BB5736200A1B62F /* FITBaseViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FITBaseViewController.h; sourceTree = "<group>"; };
+		24DF63EC1BB5736200A1B62F /* FITBaseViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FITBaseViewController.m; sourceTree = "<group>"; };
+		24DF63EE1BB577FC00A1B62F /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
+		24DF63F01BB579EF00A1B62F /* UIImageEffects.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = UIImageEffects.h; sourceTree = "<group>"; };
+		24DF63F11BB579EF00A1B62F /* UIImageEffects.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = UIImageEffects.m; sourceTree = "<group>"; };
+		24DF63F31BB57AA300A1B62F /* Accelerate.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Accelerate.framework; path = System/Library/Frameworks/Accelerate.framework; sourceTree = SDKROOT; };
+		2C8B0AC098B081976A298989 /* libPods-Fitsei.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-Fitsei.a"; sourceTree = BUILT_PRODUCTS_DIR; };
+		2FCDD6AF14A573F500295AAC /* QuartzCore.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = QuartzCore.framework; path = System/Library/Frameworks/QuartzCore.framework; sourceTree = SDKROOT; };
+		4998650415BF305000803E05 /* StoreKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = StoreKit.framework; path = System/Library/Frameworks/StoreKit.framework; sourceTree = SDKROOT; };
+		6332375315E438E900AE2736 /* libsqlite3.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; name = libsqlite3.dylib; path = usr/lib/libsqlite3.dylib; sourceTree = SDKROOT; };
+		6372FF521613CC3C002132AF /* Accounts.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Accounts.framework; path = System/Library/Frameworks/Accounts.framework; sourceTree = SDKROOT; };
+		6372FF551613CC42002132AF /* Social.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Social.framework; path = System/Library/Frameworks/Social.framework; sourceTree = SDKROOT; };
+		6372FF571613CC47002132AF /* AdSupport.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AdSupport.framework; path = System/Library/Frameworks/AdSupport.framework; sourceTree = SDKROOT; };
+		743D7B6C157DA60100084B67 /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
+		797ED7F11BB5AA2E004420AC /* LaunchScreen.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = LaunchScreen.storyboard; sourceTree = "<group>"; };
+		797ED7F41BB5BFC8004420AC /* FITHomeCollectionViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FITHomeCollectionViewCell.h; sourceTree = "<group>"; };
+		797ED7F51BB5BFC8004420AC /* FITHomeCollectionViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FITHomeCollectionViewCell.m; sourceTree = "<group>"; };
+		797ED7F81BB5E663004420AC /* FITHomeFlowLayout.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FITHomeFlowLayout.h; sourceTree = "<group>"; };
+		797ED7F91BB5E663004420AC /* FITHomeFlowLayout.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FITHomeFlowLayout.m; sourceTree = "<group>"; };
+		797ED7FB1BB5F3A6004420AC /* UIColor+Hex.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIColor+Hex.h"; sourceTree = "<group>"; };
+		797ED7FC1BB5F3A6004420AC /* UIColor+Hex.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIColor+Hex.m"; sourceTree = "<group>"; };
+		797ED7FE1BB5FDA5004420AC /* FITLogoTableViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FITLogoTableViewCell.h; sourceTree = "<group>"; };
+		797ED7FF1BB5FDA5004420AC /* FITLogoTableViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FITLogoTableViewCell.m; sourceTree = "<group>"; };
+		797ED8021BB616BC004420AC /* FITPlanViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FITPlanViewController.h; sourceTree = "<group>"; };
+		797ED8031BB616BC004420AC /* FITPlanViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FITPlanViewController.m; sourceTree = "<group>"; };
+		797ED8051BB61B9F004420AC /* FITBigPlanCollectionViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FITBigPlanCollectionViewCell.h; sourceTree = "<group>"; };
+		797ED8061BB61B9F004420AC /* FITBigPlanCollectionViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FITBigPlanCollectionViewCell.m; sourceTree = "<group>"; };
+		797ED8081BB61BB4004420AC /* FITSmallPlanCollectionViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FITSmallPlanCollectionViewCell.h; sourceTree = "<group>"; };
+		797ED8091BB61BB4004420AC /* FITSmallPlanCollectionViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FITSmallPlanCollectionViewCell.m; sourceTree = "<group>"; };
+		797ED80B1BB6232B004420AC /* FITBigPlanFlowLayout.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FITBigPlanFlowLayout.h; sourceTree = "<group>"; };
+		797ED80C1BB6232B004420AC /* FITBigPlanFlowLayout.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FITBigPlanFlowLayout.m; sourceTree = "<group>"; };
+		797ED80F1BB64153004420AC /* FITShoppingViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FITShoppingViewController.h; sourceTree = "<group>"; };
+		797ED8101BB64153004420AC /* FITShoppingViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FITShoppingViewController.m; sourceTree = "<group>"; };
+		797ED8131BB650A4004420AC /* FITShoppingProductTableViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FITShoppingProductTableViewCell.h; sourceTree = "<group>"; };
+		797ED8141BB650A4004420AC /* FITShoppingProductTableViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FITShoppingProductTableViewCell.m; sourceTree = "<group>"; };
+		797ED8161BB653D7004420AC /* FITShoppingHeaderView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FITShoppingHeaderView.h; sourceTree = "<group>"; };
+		797ED8171BB653D7004420AC /* FITShoppingHeaderView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FITShoppingHeaderView.m; sourceTree = "<group>"; };
+		797ED81A1BB68326004420AC /* FITDietPlanPresenter.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FITDietPlanPresenter.h; sourceTree = "<group>"; };
+		797ED81B1BB68326004420AC /* FITDietPlanPresenter.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FITDietPlanPresenter.m; sourceTree = "<group>"; };
+		797ED81E1BB69A7E004420AC /* FITSettingsViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FITSettingsViewController.h; sourceTree = "<group>"; };
+		797ED81F1BB69A7E004420AC /* FITSettingsViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FITSettingsViewController.m; sourceTree = "<group>"; };
+		814C3AB61B69864600E307BB /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
+		814C3ABC1B69864600E307BB /* Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		81A6CA601A2EA82800297C39 /* libstdc++.6.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; name = "libstdc++.6.dylib"; path = "usr/lib/libstdc++.6.dylib"; sourceTree = SDKROOT; };
+		83E8CFE2B109DE155B0F14E3 /* Pods-Fitsei.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Fitsei.release.xcconfig"; path = "Pods/Target Support Files/Pods-Fitsei/Pods-Fitsei.release.xcconfig"; sourceTree = "<group>"; };
+		97E18B1E1624CB5700B17A67 /* CoreLocation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreLocation.framework; path = System/Library/Frameworks/CoreLocation.framework; sourceTree = SDKROOT; };
+		AEED3D529C4140FA4A7A5A97 /* Pods-Fitsei.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Fitsei.debug.xcconfig"; path = "Pods/Target Support Files/Pods-Fitsei/Pods-Fitsei.debug.xcconfig"; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		09ABC06A13A1D52D009C3FCF /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				24DF63F41BB57AA300A1B62F /* Accelerate.framework in Frameworks */,
+				81A6CA611A2EA82800297C39 /* libstdc++.6.dylib in Frameworks */,
+				DD952FCB16E7F5CF00470144 /* CoreLocation.framework in Frameworks */,
+				4998650515BF305000803E05 /* StoreKit.framework in Frameworks */,
+				743D7B6D157DA60100084B67 /* CoreGraphics.framework in Frameworks */,
+				81AFA6791B0EDD12000763C0 /* libsqlite3.dylib in Frameworks */,
+				2FCDD6B014A573F500295AAC /* QuartzCore.framework in Frameworks */,
+				099CCEAD13F9E3760039A464 /* libz.1.1.3.dylib in Frameworks */,
+				09BEF34C13D51C3F001BBCDB /* Security.framework in Frameworks */,
+				095ACE8613C68EA300566243 /* AudioToolbox.framework in Frameworks */,
+				092354B513A1D7F000DA740F /* SystemConfiguration.framework in Frameworks */,
+				092354B313A1D7EB00DA740F /* CFNetwork.framework in Frameworks */,
+				09ABC07213A1D52D009C3FCF /* UIKit.framework in Frameworks */,
+				09ABC07413A1D52D009C3FCF /* Foundation.framework in Frameworks */,
+				BF629374FF6852A21B032A2D /* libPods-Fitsei.a in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		09ABC06213A1D52D009C3FCF = {
+			isa = PBXGroup;
+			children = (
+				09ABC07713A1D52D009C3FCF /* Fitsei */,
+				814C3AB11B69864600E307BB /* Resources */,
+				09ABC07013A1D52D009C3FCF /* Frameworks */,
+				09ABC06E13A1D52D009C3FCF /* Products */,
+				A00E466C49CBAD0A299C298E /* Pods */,
+			);
+			sourceTree = "<group>";
+		};
+		09ABC06E13A1D52D009C3FCF /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				09ABC06D13A1D52D009C3FCF /* Fitsei.app */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		09ABC07013A1D52D009C3FCF /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				24DF63F31BB57AA300A1B62F /* Accelerate.framework */,
+				81A6CA5E1A2EA0B800297C39 /* System Frameworks */,
+				2C8B0AC098B081976A298989 /* libPods-Fitsei.a */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		09ABC07713A1D52D009C3FCF /* Fitsei */ = {
+			isa = PBXGroup;
+			children = (
+				797ED8191BB68293004420AC /* Presenter */,
+				241141B11BB55A930039591B /* Main */,
+				241141B21BB55A980039591B /* Controller */,
+				241141B01BB55A8C0039591B /* View */,
+				09ABC07813A1D52D009C3FCF /* Other Sources */,
+			);
+			name = Fitsei;
+			path = ParseStarterProject;
+			sourceTree = "<group>";
+		};
+		09ABC07813A1D52D009C3FCF /* Other Sources */ = {
+			isa = PBXGroup;
+			children = (
+				24DF63F01BB579EF00A1B62F /* UIImageEffects.h */,
+				24DF63F11BB579EF00A1B62F /* UIImageEffects.m */,
+				09ABC07E13A1D52D009C3FCF /* main.m */,
+				241141B51BB55D390039591B /* FITPrefixHeader.pch */,
+				24DF63E21BB560E400A1B62F /* Consts.h */,
+				797ED7FB1BB5F3A6004420AC /* UIColor+Hex.h */,
+				797ED7FC1BB5F3A6004420AC /* UIColor+Hex.m */,
+			);
+			name = "Other Sources";
+			sourceTree = "<group>";
+		};
+		241141B01BB55A8C0039591B /* View */ = {
+			isa = PBXGroup;
+			children = (
+				241141AE1BB55A850039591B /* DrawerStoryboard.storyboard */,
+				797ED7F11BB5AA2E004420AC /* LaunchScreen.storyboard */,
+			);
+			name = View;
+			sourceTree = "<group>";
+		};
+		241141B11BB55A930039591B /* Main */ = {
+			isa = PBXGroup;
+			children = (
+				09ABC08013A1D52D009C3FCF /* AppDelegate.h */,
+				09ABC08113A1D52D009C3FCF /* AppDelegate.m */,
+			);
+			name = Main;
+			sourceTree = "<group>";
+		};
+		241141B21BB55A980039591B /* Controller */ = {
+			isa = PBXGroup;
+			children = (
+				24DF63E71BB5720300A1B62F /* Base */,
+				24DF63DA1BB5604800A1B62F /* Drawer */,
+				797ED8011BB616A0004420AC /* Plan */,
+				24DF63E31BB5614A00A1B62F /* Home */,
+				797ED80E1BB64137004420AC /* Shopping */,
+				797ED81D1BB69A66004420AC /* Settings */,
+			);
+			name = Controller;
+			sourceTree = "<group>";
+		};
+		24DF63DA1BB5604800A1B62F /* Drawer */ = {
+			isa = PBXGroup;
+			children = (
+				24DF63DB1BB5605700A1B62F /* Cell */,
+				241141AB1BB55A0E0039591B /* FITDrawerViewController.h */,
+				241141AC1BB55A0E0039591B /* FITDrawerViewController.m */,
+				24DF63D41BB55F6D00A1B62F /* FITLeftMenuViewController.h */,
+				24DF63D51BB55F6D00A1B62F /* FITLeftMenuViewController.m */,
+				24DF63D71BB55F7A00A1B62F /* FITRightMenuViewController.h */,
+				24DF63D81BB55F7A00A1B62F /* FITRightMenuViewController.m */,
+			);
+			name = Drawer;
+			sourceTree = "<group>";
+		};
+		24DF63DB1BB5605700A1B62F /* Cell */ = {
+			isa = PBXGroup;
+			children = (
+				24DF63DC1BB5606D00A1B62F /* FITLeftMenuTableViewCell.h */,
+				24DF63DD1BB5606D00A1B62F /* FITLeftMenuTableViewCell.m */,
+				24DF63DF1BB5607600A1B62F /* FITRightMenuTableViewCell.h */,
+				24DF63E01BB5607600A1B62F /* FITRightMenuTableViewCell.m */,
+				797ED7FE1BB5FDA5004420AC /* FITLogoTableViewCell.h */,
+				797ED7FF1BB5FDA5004420AC /* FITLogoTableViewCell.m */,
+			);
+			name = Cell;
+			sourceTree = "<group>";
+		};
+		24DF63E31BB5614A00A1B62F /* Home */ = {
+			isa = PBXGroup;
+			children = (
+				797ED7F71BB5BFCC004420AC /* Cell */,
+				24DF63E41BB5615B00A1B62F /* FITHomeViewController.h */,
+				24DF63E51BB5615B00A1B62F /* FITHomeViewController.m */,
+			);
+			name = Home;
+			sourceTree = "<group>";
+		};
+		24DF63E71BB5720300A1B62F /* Base */ = {
+			isa = PBXGroup;
+			children = (
+				24DF63E81BB5721700A1B62F /* FITNavigationViewController.h */,
+				24DF63E91BB5721700A1B62F /* FITNavigationViewController.m */,
+				24DF63EB1BB5736200A1B62F /* FITBaseViewController.h */,
+				24DF63EC1BB5736200A1B62F /* FITBaseViewController.m */,
+			);
+			name = Base;
+			sourceTree = "<group>";
+		};
+		797ED7F71BB5BFCC004420AC /* Cell */ = {
+			isa = PBXGroup;
+			children = (
+				797ED7F41BB5BFC8004420AC /* FITHomeCollectionViewCell.h */,
+				797ED7F51BB5BFC8004420AC /* FITHomeCollectionViewCell.m */,
+				797ED7F81BB5E663004420AC /* FITHomeFlowLayout.h */,
+				797ED7F91BB5E663004420AC /* FITHomeFlowLayout.m */,
+			);
+			name = Cell;
+			sourceTree = "<group>";
+		};
+		797ED8011BB616A0004420AC /* Plan */ = {
+			isa = PBXGroup;
+			children = (
+				797ED8211BB69BA3004420AC /* Cell */,
+				797ED8021BB616BC004420AC /* FITPlanViewController.h */,
+				797ED8031BB616BC004420AC /* FITPlanViewController.m */,
+			);
+			name = Plan;
+			sourceTree = "<group>";
+		};
+		797ED80E1BB64137004420AC /* Shopping */ = {
+			isa = PBXGroup;
+			children = (
+				797ED8121BB6507D004420AC /* Cell */,
+				797ED80F1BB64153004420AC /* FITShoppingViewController.h */,
+				797ED8101BB64153004420AC /* FITShoppingViewController.m */,
+			);
+			name = Shopping;
+			sourceTree = "<group>";
+		};
+		797ED8121BB6507D004420AC /* Cell */ = {
+			isa = PBXGroup;
+			children = (
+				797ED8131BB650A4004420AC /* FITShoppingProductTableViewCell.h */,
+				797ED8141BB650A4004420AC /* FITShoppingProductTableViewCell.m */,
+				797ED8161BB653D7004420AC /* FITShoppingHeaderView.h */,
+				797ED8171BB653D7004420AC /* FITShoppingHeaderView.m */,
+			);
+			name = Cell;
+			sourceTree = "<group>";
+		};
+		797ED8191BB68293004420AC /* Presenter */ = {
+			isa = PBXGroup;
+			children = (
+				797ED81A1BB68326004420AC /* FITDietPlanPresenter.h */,
+				797ED81B1BB68326004420AC /* FITDietPlanPresenter.m */,
+			);
+			name = Presenter;
+			sourceTree = "<group>";
+		};
+		797ED81D1BB69A66004420AC /* Settings */ = {
+			isa = PBXGroup;
+			children = (
+				797ED81E1BB69A7E004420AC /* FITSettingsViewController.h */,
+				797ED81F1BB69A7E004420AC /* FITSettingsViewController.m */,
+			);
+			name = Settings;
+			sourceTree = "<group>";
+		};
+		797ED8211BB69BA3004420AC /* Cell */ = {
+			isa = PBXGroup;
+			children = (
+				797ED8051BB61B9F004420AC /* FITBigPlanCollectionViewCell.h */,
+				797ED8061BB61B9F004420AC /* FITBigPlanCollectionViewCell.m */,
+				797ED8081BB61BB4004420AC /* FITSmallPlanCollectionViewCell.h */,
+				797ED8091BB61BB4004420AC /* FITSmallPlanCollectionViewCell.m */,
+				797ED80B1BB6232B004420AC /* FITBigPlanFlowLayout.h */,
+				797ED80C1BB6232B004420AC /* FITBigPlanFlowLayout.m */,
+			);
+			name = Cell;
+			sourceTree = "<group>";
+		};
+		814C3AB11B69864600E307BB /* Resources */ = {
+			isa = PBXGroup;
+			children = (
+				814C3AB51B69864600E307BB /* InfoPlist.strings */,
+				814C3ABC1B69864600E307BB /* Info.plist */,
+				24DF63EE1BB577FC00A1B62F /* Images.xcassets */,
+			);
+			path = Resources;
+			sourceTree = "<group>";
+		};
+		81A6CA5E1A2EA0B800297C39 /* System Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				6372FF571613CC47002132AF /* AdSupport.framework */,
+				6372FF551613CC42002132AF /* Social.framework */,
+				6372FF521613CC3C002132AF /* Accounts.framework */,
+				095ACE8513C68EA300566243 /* AudioToolbox.framework */,
+				092354B213A1D7EB00DA740F /* CFNetwork.framework */,
+				743D7B6C157DA60100084B67 /* CoreGraphics.framework */,
+				97E18B1E1624CB5700B17A67 /* CoreLocation.framework */,
+				09ABC07313A1D52D009C3FCF /* Foundation.framework */,
+				6332375315E438E900AE2736 /* libsqlite3.dylib */,
+				099CCEAC13F9E3760039A464 /* libz.1.1.3.dylib */,
+				81A6CA601A2EA82800297C39 /* libstdc++.6.dylib */,
+				2FCDD6AF14A573F500295AAC /* QuartzCore.framework */,
+				09BEF34B13D51C3F001BBCDB /* Security.framework */,
+				4998650415BF305000803E05 /* StoreKit.framework */,
+				092354B413A1D7F000DA740F /* SystemConfiguration.framework */,
+				09ABC07113A1D52D009C3FCF /* UIKit.framework */,
+			);
+			name = "System Frameworks";
+			sourceTree = "<group>";
+		};
+		A00E466C49CBAD0A299C298E /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				AEED3D529C4140FA4A7A5A97 /* Pods-Fitsei.debug.xcconfig */,
+				83E8CFE2B109DE155B0F14E3 /* Pods-Fitsei.release.xcconfig */,
+			);
+			name = Pods;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		09ABC06C13A1D52D009C3FCF /* Fitsei */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 09ABC08E13A1D52E009C3FCF /* Build configuration list for PBXNativeTarget "Fitsei" */;
+			buildPhases = (
+				21588577FFEAA3CA8A33DA65 /* Check Pods Manifest.lock */,
+				09ABC06913A1D52D009C3FCF /* Sources */,
+				09ABC06A13A1D52D009C3FCF /* Frameworks */,
+				09ABC06B13A1D52D009C3FCF /* Resources */,
+				81A6CA5F1A2EA3D600297C39 /* Upload Symbol Files */,
+				B50D94552F1374E9AEA70E85 /* Copy Pods Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = Fitsei;
+			productName = ParseStarterProject;
+			productReference = 09ABC06D13A1D52D009C3FCF /* Fitsei.app */;
+			productType = "com.apple.product-type.application";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		09ABC06413A1D52D009C3FCF /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				CLASSPREFIX = FIT;
+				LastUpgradeCheck = 0510;
+				ORGANIZATIONNAME = "Konrad Roj";
+			};
+			buildConfigurationList = 09ABC06713A1D52D009C3FCF /* Build configuration list for PBXProject "Fitsei" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = English;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+			);
+			mainGroup = 09ABC06213A1D52D009C3FCF;
+			productRefGroup = 09ABC06E13A1D52D009C3FCF /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				09ABC06C13A1D52D009C3FCF /* Fitsei */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		09ABC06B13A1D52D009C3FCF /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				241141AF1BB55A850039591B /* DrawerStoryboard.storyboard in Resources */,
+				797ED7F21BB5AA2E004420AC /* LaunchScreen.storyboard in Resources */,
+				24DF63EF1BB577FC00A1B62F /* Images.xcassets in Resources */,
+				814C3AC01B69864600E307BB /* InfoPlist.strings in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		21588577FFEAA3CA8A33DA65 /* Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "Check Pods Manifest.lock";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [[ $? != 0 ]] ; then\n    cat << EOM\nerror: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\nEOM\n    exit 1\nfi\n";
+			showEnvVarsInLog = 0;
+		};
+		81A6CA5F1A2EA3D600297C39 /* Upload Symbol Files */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "Upload Symbol Files";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "# This script will upload symbol files for your application,\n# so all your crash reports are going to be symbolicated\n\n# Important!\n# Before using the script, please initialize CloudCode folder and replace <path_to_cloudcode_folder> with the path to it\n#\n# Read more on Parse.com - https://parse.com/apps/quickstart#analytics/crashreporting/ios/\n############################################################\n\n\n# export PATH=/usr/local/bin:$PATH\n# cd <path_to_cloudcode_folder>\n\n# parse symbols -p \"${DWARF_DSYM_FOLDER_PATH}/${DWARF_DSYM_FILE_NAME}\"\n";
+		};
+		B50D94552F1374E9AEA70E85 /* Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-Fitsei/Pods-Fitsei-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		09ABC06913A1D52D009C3FCF /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				24DF63D61BB55F6D00A1B62F /* FITLeftMenuViewController.m in Sources */,
+				797ED8201BB69A7E004420AC /* FITSettingsViewController.m in Sources */,
+				797ED7F61BB5BFC8004420AC /* FITHomeCollectionViewCell.m in Sources */,
+				797ED80A1BB61BB4004420AC /* FITSmallPlanCollectionViewCell.m in Sources */,
+				241141AD1BB55A0E0039591B /* FITDrawerViewController.m in Sources */,
+				09ABC07F13A1D52D009C3FCF /* main.m in Sources */,
+				797ED8071BB61B9F004420AC /* FITBigPlanCollectionViewCell.m in Sources */,
+				24DF63EA1BB5721700A1B62F /* FITNavigationViewController.m in Sources */,
+				797ED80D1BB6232C004420AC /* FITBigPlanFlowLayout.m in Sources */,
+				24DF63E11BB5607600A1B62F /* FITRightMenuTableViewCell.m in Sources */,
+				24DF63DE1BB5606D00A1B62F /* FITLeftMenuTableViewCell.m in Sources */,
+				797ED7FA1BB5E663004420AC /* FITHomeFlowLayout.m in Sources */,
+				797ED8181BB653D7004420AC /* FITShoppingHeaderView.m in Sources */,
+				24DF63E61BB5615B00A1B62F /* FITHomeViewController.m in Sources */,
+				797ED8111BB64153004420AC /* FITShoppingViewController.m in Sources */,
+				797ED8001BB5FDA5004420AC /* FITLogoTableViewCell.m in Sources */,
+				24DF63ED1BB5736200A1B62F /* FITBaseViewController.m in Sources */,
+				24DF63D91BB55F7A00A1B62F /* FITRightMenuViewController.m in Sources */,
+				797ED7FD1BB5F3A6004420AC /* UIColor+Hex.m in Sources */,
+				09ABC08213A1D52D009C3FCF /* AppDelegate.m in Sources */,
+				24DF63F21BB579EF00A1B62F /* UIImageEffects.m in Sources */,
+				797ED8151BB650A4004420AC /* FITShoppingProductTableViewCell.m in Sources */,
+				797ED8041BB616BC004420AC /* FITPlanViewController.m in Sources */,
+				797ED81C1BB68326004420AC /* FITDietPlanPresenter.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXVariantGroup section */
+		814C3AB51B69864600E307BB /* InfoPlist.strings */ = {
+			isa = PBXVariantGroup;
+			children = (
+				814C3AB61B69864600E307BB /* en */,
+			);
+			name = InfoPlist.strings;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		09ABC08C13A1D52E009C3FCF /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = DEBUG;
+				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 7.0;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+			};
+			name = Debug;
+		};
+		09ABC08D13A1D52E009C3FCF /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				GCC_WARN_ABOUT_RETURN_TYPE = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 7.0;
+				OTHER_CFLAGS = "-DNS_BLOCK_ASSERTIONS=1";
+				SDKROOT = iphoneos;
+			};
+			name = Release;
+		};
+		09ABC08F13A1D52E009C3FCF /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = AEED3D529C4140FA4A7A5A97 /* Pods-Fitsei.debug.xcconfig */;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = BrandAsset;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(SRCROOT)",
+					"$(PROJECT_DIR)",
+				);
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = ParseStarterProject/FITPrefixHeader.pch;
+				INFOPLIST_FILE = Resources/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
+				PRODUCT_BUNDLE_IDENTIFIER = com.konradroj.Fitsei;
+				PRODUCT_NAME = Fitsei;
+				WRAPPER_EXTENSION = app;
+			};
+			name = Debug;
+		};
+		09ABC09013A1D52E009C3FCF /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 83E8CFE2B109DE155B0F14E3 /* Pods-Fitsei.release.xcconfig */;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = BrandAsset;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				COPY_PHASE_STRIP = YES;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(SRCROOT)",
+					"$(PROJECT_DIR)",
+				);
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = ParseStarterProject/FITPrefixHeader.pch;
+				INFOPLIST_FILE = Resources/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
+				PRODUCT_BUNDLE_IDENTIFIER = com.konradroj.Fitsei;
+				PRODUCT_NAME = Fitsei;
+				VALIDATE_PRODUCT = YES;
+				WRAPPER_EXTENSION = app;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		09ABC06713A1D52D009C3FCF /* Build configuration list for PBXProject "Fitsei" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				09ABC08C13A1D52E009C3FCF /* Debug */,
+				09ABC08D13A1D52E009C3FCF /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		09ABC08E13A1D52E009C3FCF /* Build configuration list for PBXNativeTarget "Fitsei" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				09ABC08F13A1D52E009C3FCF /* Debug */,
+				09ABC09013A1D52E009C3FCF /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = 09ABC06413A1D52D009C3FCF /* Project object */;
+}
