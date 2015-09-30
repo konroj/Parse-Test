@@ -39,6 +39,11 @@
 			<key>isShown</key>
 			<false/>
 		</dict>
+		<key>SVProgressHUD.xcscheme</key>
+		<dict>
+			<key>isShown</key>
+			<false/>
+		</dict>
 		<key>SWTableViewCell.xcscheme</key>
 		<dict>
 			<key>isShown</key>
@@ -47,37 +52,42 @@
 	</dict>
 	<key>SuppressBuildableAutocreation</key>
 	<dict>
-		<key>06C9E68F2FDF7D03516676F9D68889D2</key>
+		<key>0B4D3B643E0628225EF8523112100E47</key>
 		<dict>
 			<key>primary</key>
 			<true/>
 		</dict>
-		<key>10A38C8F2067B5E629506BBEE8D56BC2</key>
+		<key>20B904ABAC050EFDAE7E3E9B44869CD1</key>
 		<dict>
 			<key>primary</key>
 			<true/>
 		</dict>
-		<key>2829F182486289B98D051F69781B7103</key>
+		<key>5544AABEF71112D3438262A1A89FA78F</key>
 		<dict>
 			<key>primary</key>
 			<true/>
 		</dict>
-		<key>39CB381BBD12E42BF468A2765F79F90B</key>
+		<key>5F0CC9F79C7763B73BC1B46396257602</key>
 		<dict>
 			<key>primary</key>
 			<true/>
 		</dict>
-		<key>3AF691CC516F0A2F40692E9F3CC69CC9</key>
+		<key>8F026B0B7451414E1F90AA9229C6D6D1</key>
 		<dict>
 			<key>primary</key>
 			<true/>
 		</dict>
-		<key>437F61F1160634D521D4FC24A0AB7DA9</key>
+		<key>B281DA29A9C3EDFB45BA53651F6BA611</key>
 		<dict>
 			<key>primary</key>
 			<true/>
 		</dict>
-		<key>C9F11AB09A67792403473F31F13264FB</key>
+		<key>C5097C318F932FF5F5C0B7309889D78E</key>
+		<dict>
+			<key>primary</key>
+			<true/>
+		</dict>
+		<key>CDB51F032C8975B0FDB53F25B606C388</key>
 		<dict>
 			<key>primary</key>
 			<true/>

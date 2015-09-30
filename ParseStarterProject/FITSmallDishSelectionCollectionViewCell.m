@@ -15,8 +15,8 @@
 @implementation FITSmallDishSelectionCollectionViewCell
 
 - (void)awakeFromNib {
-    [self.addButton setTitle:NSLocalizedString(@"ADD", nil) forState:UIControlStateNormal];
-    [self.detailButton setTitle:NSLocalizedString(@"DETAIL", nil) forState:UIControlStateNormal];
+    self.addLabel.text = NSLocalizedString(@"ADD", nil);
+    self.detailLabel.text = NSLocalizedString(@"DETAIL", nil);
     
     self.plusImage.image = [[UIImage imageNamed:@"plus"] imageWithRenderingMode:UIImageRenderingModeAlwaysTemplate];
     self.plusImage.tintColor = [UIColor whiteColor];

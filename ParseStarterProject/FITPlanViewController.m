@@ -20,7 +20,7 @@
 @property (weak, nonatomic) IBOutlet UICollectionView *collectionView;
 @property (weak, nonatomic) IBOutlet UIImageView *background;
 @property (assign, nonatomic) NSInteger currentPage;
-@property (assign, nonatomic) BOOL colorSet;
+@property (assign, nonatomic) BOOL isCurrentWeek;
 @property (assign, nonatomic) BOOL firstLayoutSubviewsCalled;
 @property (strong, nonatomic) FITDietPlanPresenter *presenter;
 @end
@@ -125,15 +125,11 @@
     }
     
     if (newTargetOffset == 0 || newTargetOffset < 0) {
-        self.colorSet = NO;
-        
         [UIView animateWithDuration:0.6f animations:^{
             self.background.alpha = 1.0f;
         }];
         
-    } else if (newTargetOffset >= 1 && !self.colorSet) {
-        self.colorSet = YES;
-        
+    } else if (newTargetOffset >= 1) {
         [UIView animateWithDuration:0.6f animations:^{
             self.background.alpha = 0.0f;
         }];
@@ -174,6 +170,7 @@
     weekOfYear+=week;
     
     self.dates = [self.presenter datesInWeek:weekOfYear];
+    [self.collectionView reloadData];
 }
 
 - (NSInteger)currentDayIndex {

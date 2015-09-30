@@ -8,8 +8,6 @@
 
 #import "FITShoppingListPresenter.h"
 
-typedef void(^completionBlock)(BOOL finished);
-
 @implementation FITShoppingListPresenter
 
 - (M13OrderedDictionary *)fetchShoppingListForThisWeek {
@@ -105,7 +103,7 @@ typedef void(^completionBlock)(BOOL finished);
     comps.hour = 12;
     NSDate *start = [greg dateFromComponents:comps];
     comps = [greg components:NSCalendarUnitWeekday fromDate:start];
-    if (weekNumber==1) {
+    if (weekNumber == 1) {
         start = [start dateByAddingTimeInterval:-kDay*(comps.weekday-1)];
     } else {
         start = [start dateByAddingTimeInterval:
@@ -120,10 +118,10 @@ typedef void(^completionBlock)(BOOL finished);
 
 - (void)fetchObject:(PFObject *)object {
     if ([object isDataAvailable]) {
-        [object fetchFromLocalDatastoreInBackground];
+        [object fetchFromLocalDatastore];
     } else {
         [object fetchIfNeeded];
-        [object pinInBackground];
+        [PFObject pinAll:@[object]];
     }
 }
 

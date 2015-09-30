@@ -12,8 +12,8 @@
 @implementation FITSmallPlanCollectionViewCell
 
 - (void)awakeFromNib {
-    [self.removeButton setTitle:NSLocalizedString(@"REMOVE", nil) forState:UIControlStateNormal];
-    [self.editButton setTitle:NSLocalizedString(@"EDIT", nil) forState:UIControlStateNormal];
+    self.removeLabel.text = NSLocalizedString(@"REMOVE", nil);
+    self.editLabel.text = NSLocalizedString(@"EDIT", nil);
     
     self.removeImage.image = [[UIImage imageNamed:@"delete"] imageWithRenderingMode:UIImageRenderingModeAlwaysTemplate];
     self.removeImage.tintColor = [UIColor whiteColor];

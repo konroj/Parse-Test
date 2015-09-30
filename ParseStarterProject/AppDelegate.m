@@ -71,6 +71,8 @@
             [[NSUserDefaults standardUserDefaults] synchronize];
         }];
     }
+    
+    [SVProgressHUD setInfoImage:[UIImage imageNamed:@"logo"]];
 
     return YES;
 }

@@ -18,7 +18,7 @@
 @interface FITProductDetailViewController () <UITableViewDataSource, UITableViewDelegate, LeftMenuDelegate>
 @property (weak, nonatomic) IBOutlet UITableView *tableView;
 
-@property (strong, nonatomic) NSString *language;
+@property (assign, nonatomic) BOOL isLoadingObjects;
 @end
 
 @implementation FITProductDetailViewController
@@ -33,6 +33,9 @@
     
     [((FITNavigationViewController *)self.navigationController) animateNavigationBarTintToColor:[UIColor blackColor] duration:0.4f];
     
+    self.isLoadingObjects = YES;
+    [SVProgressHUD showWithStatus:NSLocalizedString(@"Heating proteins...", nil) maskType:SVProgressHUDMaskTypeGradient];
+    
     __weak __typeof__(self) weakSelf = self;
     dispatch_async(dispatch_get_global_queue(DISPATCH_QUEUE_PRIORITY_DEFAULT, 0), ^{
         for (FITProductEntity *product in self.dishEntity.products) {
@@ -40,11 +43,13 @@
                 [product fetchFromLocalDatastore];
             } else {
                 [product fetchIfNeeded];
-                [product pinInBackground];
+                [PFObject pinAll:@[product]];
             }
         }
-    dispatch_async(dispatch_get_main_queue(), ^{
+        dispatch_async(dispatch_get_main_queue(), ^{
+            self.isLoadingObjects = NO;
             [weakSelf.tableView reloadData];
+            [SVProgressHUD dismiss];
         });
     });
 }
@@ -64,6 +69,9 @@
 }
 
 - (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section {
+    if (self.isLoadingObjects == YES) {
+        return 2;
+    }
     return 4 + self.dishEntity.products.count;
 }
 

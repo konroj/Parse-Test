@@ -9,6 +9,7 @@ pod 'Masonry'
 pod 'SWTableViewCell'
 pod 'M13OrderedDictionary'
 pod 'AFNetworking'
+pod 'SVProgressHUD'
 
 end
 

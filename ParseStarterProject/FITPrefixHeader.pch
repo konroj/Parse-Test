@@ -23,6 +23,7 @@
 #import <M13OrderedDictionary/M13OrderedDictionary.h>
 #import <AFNetworking/AFNetworking.h>
 #import <AFNetworking/UIImageView+AFNetworking.h>
+#import <SVProgressHUD/SVProgressHUD.h>
 
 #import "FITProductEntity.h"
 #import "FITDishEntity.h"

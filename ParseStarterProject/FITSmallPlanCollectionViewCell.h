@@ -24,6 +24,9 @@
 @property (weak, nonatomic) IBOutlet UILabel *nameLabel;
 @property (weak, nonatomic) IBOutlet UIView *backView;
 
+@property (weak, nonatomic) IBOutlet UILabel *removeLabel;
+@property (weak, nonatomic) IBOutlet UILabel *editLabel;
+
 @property (weak, nonatomic) IBOutlet UIButton *removeButton;
 @property (weak, nonatomic) IBOutlet UIButton *editButton;
 @property (weak, nonatomic) IBOutlet UIImageView *removeImage;

@@ -59,6 +59,7 @@ static NSUInteger const ANIMATION_SPEED = 1.0f;
     self.dataLoaded = NO;
     self.kcalLabel.text = NSLocalizedString(@"Calculating...", nil);
     
+    [SVProgressHUD showWithStatus:NSLocalizedString(@"Heating proteins...", nil) maskType:SVProgressHUDMaskTypeGradient];
     __weak __typeof__(self) weakSelf = self;
     dispatch_async(dispatch_get_global_queue(DISPATCH_QUEUE_PRIORITY_DEFAULT, 0), ^{
         self.dataList = [self dishArrayFromDayEntity:[self.presenter fetchTodayDiet]];
@@ -67,13 +68,14 @@ static NSUInteger const ANIMATION_SPEED = 1.0f;
                 [dish fetchFromLocalDatastore];
             } else {
                 [dish fetchIfNeeded];
-                [dish pinInBackground];
+                [PFObject pinAll:@[dish]];
             }
         }
         dispatch_async(dispatch_get_main_queue(), ^{
             [self calculateTotalKcal];
             self.dataLoaded = YES;
             [weakSelf.collectionView reloadData];
+            [SVProgressHUD dismiss];
         });
     });
 }
@@ -89,7 +91,7 @@ static NSUInteger const ANIMATION_SPEED = 1.0f;
 }
 
 - (NSInteger)collectionView:(UICollectionView *)collectionView numberOfItemsInSection:(NSInteger)section {
-    if (!self.dataLoaded && self.dataList.count) {
+    if (!self.dataLoaded) {
         return 0;
     }
     return self.dataList.count ?: 1;
@@ -186,14 +188,14 @@ static NSUInteger const ANIMATION_SPEED = 1.0f;
             cell.transform = CGAffineTransformIdentity;
         }];
         
-        index --;
+        index--;
         cell = [self.collectionView cellForItemAtIndexPath:[NSIndexPath indexPathForItem:index inSection:0]];
         [UIView animateWithDuration:ANIMATION_SPEED animations:^{
             cell.transform = TRANSFORM_CELL_VALUE;
         }];
         
-        index ++;
-        index ++;
+        index++;
+        index++;
         cell = [self.collectionView cellForItemAtIndexPath:[NSIndexPath indexPathForItem:index inSection:0]];
         [UIView animateWithDuration:ANIMATION_SPEED animations:^{
             cell.transform = TRANSFORM_CELL_VALUE;
