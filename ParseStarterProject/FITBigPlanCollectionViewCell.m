@@ -32,7 +32,6 @@
 
 - (UICollectionViewCell *)collectionView:(UICollectionView *)collectionView cellForItemAtIndexPath:(NSIndexPath *)indexPath {
     UICollectionViewCell *cell;
-    NSLog(@"INDEX: %ld %ld", (long)indexPath.section, (long)indexPath.row);
     
     if ([self isEmptyForIndexPath:indexPath] || ![self.dayEntity.date isEqualToString:self.dayLabel.text]) {
         FITEmptyPlanCollectionViewCell *emptyCell = [collectionView dequeueReusableCellWithReuseIdentifier:@"EmptyPlanCell" forIndexPath:indexPath];

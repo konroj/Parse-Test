@@ -183,10 +183,8 @@
 }
 
 - (NSInteger)currentDayIndex {
-    CFAbsoluteTime at = CFAbsoluteTimeGetCurrent();
-    CFTimeZoneRef tz = CFTimeZoneCopySystem();
-    SInt32 weekdayNumber = CFAbsoluteTimeGetDayOfWeek(at, tz);
-    return weekdayNumber;
+    NSUInteger weekday = [[NSCalendar currentCalendar] ordinalityOfUnit:NSCalendarUnitWeekday inUnit:NSCalendarUnitWeekOfYear forDate:[NSDate date]];
+    return weekday - 2;
 }
 
 - (void)reloadPlanView {
