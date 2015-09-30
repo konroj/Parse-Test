@@ -33,9 +33,13 @@
     self.tableView.allowsMultipleSelectionDuringEditing = NO;
     
     self.presenter = [FITShoppingListPresenter new];
-    self.productsDictionary = [self.presenter fetchShoppingListForTommorow];
     
-    self.filteredDictionary = [M13MutableOrderedDictionary orderedDictionaryWithOrderedDictionary:self.productsDictionary];
+    __weak __typeof__(self) weakSelf = self;
+    dispatch_async(dispatch_get_global_queue(DISPATCH_QUEUE_PRIORITY_DEFAULT, 0), ^{
+        weakSelf.productsDictionary = [self.presenter fetchShoppingListForTommorow];
+        weakSelf.filteredDictionary = [M13MutableOrderedDictionary orderedDictionaryWithOrderedDictionary:self.productsDictionary];
+        dispatch_async(dispatch_get_main_queue(), ^{ [weakSelf.tableView reloadData]; });
+    });
 }
 
 - (void)viewWillAppear:(BOOL)animated {
