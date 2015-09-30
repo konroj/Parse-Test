@@ -25,10 +25,15 @@
 #pragma mark UIApplicationDelegate
 
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions {
-    [Parse enableLocalDatastore];
     //[ParseCrashReporting enable];
+    [FITDishEntity registerSubclass];
+    [FITProductEntity registerSubclass];
+    [FITDayEntity registerSubclass];
+    
+    [Parse enableLocalDatastore];
     [Parse setApplicationId:@"uejry7qM0YFtG1cKvYJg2FsrLtLW6Yyy8DDiOJFH" clientKey:@"n4BcI97rFOxFYOQ7od6LABRqZsUWFVqRRyi4c1VU"];
     [PFUser enableAutomaticUser];
+    
     PFACL *defaultACL = [PFACL ACL];
 
     // If you would like all objects to be private by default, remove this line.
@@ -56,8 +61,31 @@
         [application registerUserNotificationSettings:settings];
         [application registerForRemoteNotifications];
     }
+    
+    NSDate *date = [[NSUserDefaults standardUserDefaults] objectForKey:@"LastDataFetchDate"];
+    if (date == nil || [self daysBetweenDates:date second:[NSDate date]] > 6) {
+        [[NSUserDefaults standardUserDefaults] setObject:[NSDate date] forKey:@"LastDataFetchDate"];
+        [[NSUserDefaults standardUserDefaults] synchronize];
+            
+        PFQuery *query = [PFQuery queryWithClassName:@"Dish"];
+        NSArray *objects = [query findObjects];
+        [PFObject pinAllInBackground:objects];
+    }
 
     return YES;
+}
+
+- (NSInteger)daysBetweenDates:(NSDate *)startDate second:(NSDate *)endDate {
+    NSDateFormatter *f = [[NSDateFormatter alloc] init];
+    [f setDateFormat:@"yyyy-MM-dd"];
+    
+    NSCalendar *gregorianCalendar = [[NSCalendar alloc] initWithCalendarIdentifier:NSCalendarIdentifierGregorian];
+    NSDateComponents *components = [gregorianCalendar components:NSCalendarUnitDay
+                                                        fromDate:startDate
+                                                          toDate:endDate
+                                                         options:NSCalendarWrapComponents];
+    
+    return [components day];
 }
 
 #pragma mark Push Notifications

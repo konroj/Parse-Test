@@ -31,7 +31,7 @@
 		2FCDD6B014A573F500295AAC /* QuartzCore.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 2FCDD6AF14A573F500295AAC /* QuartzCore.framework */; };
 		4998650515BF305000803E05 /* StoreKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 4998650415BF305000803E05 /* StoreKit.framework */; };
 		743D7B6D157DA60100084B67 /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 743D7B6C157DA60100084B67 /* CoreGraphics.framework */; };
-		797ED7F21BB5AA2E004420AC /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 797ED7F11BB5AA2E004420AC /* LaunchScreen.storyboard */; settings = {ASSET_TAGS = (); }; };
+		7920214B1BB7D0CD00B9E056 /* FITDishSelectionViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 7920214A1BB7D0CC00B9E056 /* FITDishSelectionViewController.m */; settings = {ASSET_TAGS = (); }; };
 		797ED7F61BB5BFC8004420AC /* FITHomeCollectionViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 797ED7F51BB5BFC8004420AC /* FITHomeCollectionViewCell.m */; settings = {ASSET_TAGS = (); }; };
 		797ED7FA1BB5E663004420AC /* FITHomeFlowLayout.m in Sources */ = {isa = PBXBuildFile; fileRef = 797ED7F91BB5E663004420AC /* FITHomeFlowLayout.m */; settings = {ASSET_TAGS = (); }; };
 		797ED7FD1BB5F3A6004420AC /* UIColor+Hex.m in Sources */ = {isa = PBXBuildFile; fileRef = 797ED7FC1BB5F3A6004420AC /* UIColor+Hex.m */; settings = {ASSET_TAGS = (); }; };
@@ -45,6 +45,28 @@
 		797ED8181BB653D7004420AC /* FITShoppingHeaderView.m in Sources */ = {isa = PBXBuildFile; fileRef = 797ED8171BB653D7004420AC /* FITShoppingHeaderView.m */; settings = {ASSET_TAGS = (); }; };
 		797ED81C1BB68326004420AC /* FITDietPlanPresenter.m in Sources */ = {isa = PBXBuildFile; fileRef = 797ED81B1BB68326004420AC /* FITDietPlanPresenter.m */; settings = {ASSET_TAGS = (); }; };
 		797ED8201BB69A7E004420AC /* FITSettingsViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 797ED81F1BB69A7E004420AC /* FITSettingsViewController.m */; settings = {ASSET_TAGS = (); }; };
+		797ED8241BB69E21004420AC /* FITSettingsTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 797ED8231BB69E21004420AC /* FITSettingsTableViewCell.m */; settings = {ASSET_TAGS = (); }; };
+		797ED8281BB6B748004420AC /* FITProductDetailViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 797ED8271BB6B748004420AC /* FITProductDetailViewController.m */; settings = {ASSET_TAGS = (); }; };
+		797ED82C1BB6B853004420AC /* FITProductImageTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 797ED82B1BB6B853004420AC /* FITProductImageTableViewCell.m */; settings = {ASSET_TAGS = (); }; };
+		797ED82F1BB6BA35004420AC /* FITProductDetailTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 797ED82E1BB6BA35004420AC /* FITProductDetailTableViewCell.m */; settings = {ASSET_TAGS = (); }; };
+		797ED8321BB6C930004420AC /* FITProductTitleTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 797ED8311BB6C930004420AC /* FITProductTitleTableViewCell.m */; settings = {ASSET_TAGS = (); }; };
+		797ED8351BB6C960004420AC /* FITProductInfoTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 797ED8341BB6C960004420AC /* FITProductInfoTableViewCell.m */; settings = {ASSET_TAGS = (); }; };
+		797ED8381BB6CD3D004420AC /* FITProductLongTextTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 797ED8371BB6CD3D004420AC /* FITProductLongTextTableViewCell.m */; settings = {ASSET_TAGS = (); }; };
+		79810D5D1BB883DE00A5D5C0 /* FITSelectionPresenter.m in Sources */ = {isa = PBXBuildFile; fileRef = 79810D5C1BB883DE00A5D5C0 /* FITSelectionPresenter.m */; settings = {ASSET_TAGS = (); }; };
+		79810D601BB94DF100A5D5C0 /* FITSmallDishSelectionCollectionViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 79810D5F1BB94DF100A5D5C0 /* FITSmallDishSelectionCollectionViewCell.m */; settings = {ASSET_TAGS = (); }; };
+		79810D631BB9D0D300A5D5C0 /* FITShoppingListPresenter.m in Sources */ = {isa = PBXBuildFile; fileRef = 79810D621BB9D0D300A5D5C0 /* FITShoppingListPresenter.m */; settings = {ASSET_TAGS = (); }; };
+		79810D661BBA699900A5D5C0 /* FITHomeEmptyCollectionViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 79810D651BBA699900A5D5C0 /* FITHomeEmptyCollectionViewCell.m */; settings = {ASSET_TAGS = (); }; };
+		799681071BB874070043D34C /* FITEmptyPlanCollectionViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 799681061BB874070043D34C /* FITEmptyPlanCollectionViewCell.m */; settings = {ASSET_TAGS = (); }; };
+		7996810A1BB880950043D34C /* FITBigDishSelectionCollectionViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 799681091BB880950043D34C /* FITBigDishSelectionCollectionViewCell.m */; settings = {ASSET_TAGS = (); }; };
+		7996810D1BB880B30043D34C /* FITBigDishSelectionFlowLayout.m in Sources */ = {isa = PBXBuildFile; fileRef = 7996810C1BB880B30043D34C /* FITBigDishSelectionFlowLayout.m */; settings = {ASSET_TAGS = (); }; };
+		79AAA7251BB7F6750010ED38 /* Localizable.strings in Resources */ = {isa = PBXBuildFile; fileRef = 79AAA7271BB7F6750010ED38 /* Localizable.strings */; };
+		79AAA72B1BB80DAA0010ED38 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 79AAA72D1BB80DAA0010ED38 /* LaunchScreen.storyboard */; };
+		79AAA7361BB8198B0010ED38 /* FITDishEntity.m in Sources */ = {isa = PBXBuildFile; fileRef = 79AAA7351BB8198B0010ED38 /* FITDishEntity.m */; settings = {ASSET_TAGS = (); }; };
+		79AAA73C1BB82DC50010ED38 /* FITProductEntity.m in Sources */ = {isa = PBXBuildFile; fileRef = 79AAA73B1BB82DC50010ED38 /* FITProductEntity.m */; settings = {ASSET_TAGS = (); }; };
+		79AAA7471BB841550010ED38 /* FITHomePresenter.m in Sources */ = {isa = PBXBuildFile; fileRef = 79AAA7461BB841550010ED38 /* FITHomePresenter.m */; settings = {ASSET_TAGS = (); }; };
+		79AAA74E1BB844510010ED38 /* FITNewDishViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 79AAA74D1BB844510010ED38 /* FITNewDishViewController.m */; settings = {ASSET_TAGS = (); }; };
+		79AAA7521BB8473E0010ED38 /* FITNewDishTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 79AAA7511BB8473E0010ED38 /* FITNewDishTableViewCell.m */; settings = {ASSET_TAGS = (); }; };
+		79AAA7551BB85DDA0010ED38 /* FITDayEntity.m in Sources */ = {isa = PBXBuildFile; fileRef = 79AAA7541BB85DDA0010ED38 /* FITDayEntity.m */; settings = {ASSET_TAGS = (); }; };
 		814C3AC01B69864600E307BB /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 814C3AB51B69864600E307BB /* InfoPlist.strings */; };
 		81A6CA611A2EA82800297C39 /* libstdc++.6.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = 81A6CA601A2EA82800297C39 /* libstdc++.6.dylib */; };
 		81AFA6791B0EDD12000763C0 /* libsqlite3.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = 6332375315E438E900AE2736 /* libsqlite3.dylib */; };
@@ -83,7 +105,7 @@
 		24DF63E91BB5721700A1B62F /* FITNavigationViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FITNavigationViewController.m; sourceTree = "<group>"; };
 		24DF63EB1BB5736200A1B62F /* FITBaseViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FITBaseViewController.h; sourceTree = "<group>"; };
 		24DF63EC1BB5736200A1B62F /* FITBaseViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FITBaseViewController.m; sourceTree = "<group>"; };
-		24DF63EE1BB577FC00A1B62F /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
+		24DF63EE1BB577FC00A1B62F /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; name = Images.xcassets; path = Resources/Images.xcassets; sourceTree = "<group>"; };
 		24DF63F01BB579EF00A1B62F /* UIImageEffects.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = UIImageEffects.h; sourceTree = "<group>"; };
 		24DF63F11BB579EF00A1B62F /* UIImageEffects.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = UIImageEffects.m; sourceTree = "<group>"; };
 		24DF63F31BB57AA300A1B62F /* Accelerate.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Accelerate.framework; path = System/Library/Frameworks/Accelerate.framework; sourceTree = SDKROOT; };
@@ -95,7 +117,8 @@
 		6372FF551613CC42002132AF /* Social.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Social.framework; path = System/Library/Frameworks/Social.framework; sourceTree = SDKROOT; };
 		6372FF571613CC47002132AF /* AdSupport.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AdSupport.framework; path = System/Library/Frameworks/AdSupport.framework; sourceTree = SDKROOT; };
 		743D7B6C157DA60100084B67 /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
-		797ED7F11BB5AA2E004420AC /* LaunchScreen.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = LaunchScreen.storyboard; sourceTree = "<group>"; };
+		792021491BB7D0CC00B9E056 /* FITDishSelectionViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FITDishSelectionViewController.h; sourceTree = "<group>"; };
+		7920214A1BB7D0CC00B9E056 /* FITDishSelectionViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FITDishSelectionViewController.m; sourceTree = "<group>"; };
 		797ED7F41BB5BFC8004420AC /* FITHomeCollectionViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FITHomeCollectionViewCell.h; sourceTree = "<group>"; };
 		797ED7F51BB5BFC8004420AC /* FITHomeCollectionViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FITHomeCollectionViewCell.m; sourceTree = "<group>"; };
 		797ED7F81BB5E663004420AC /* FITHomeFlowLayout.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FITHomeFlowLayout.h; sourceTree = "<group>"; };
@@ -122,6 +145,50 @@
 		797ED81B1BB68326004420AC /* FITDietPlanPresenter.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FITDietPlanPresenter.m; sourceTree = "<group>"; };
 		797ED81E1BB69A7E004420AC /* FITSettingsViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FITSettingsViewController.h; sourceTree = "<group>"; };
 		797ED81F1BB69A7E004420AC /* FITSettingsViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FITSettingsViewController.m; sourceTree = "<group>"; };
+		797ED8221BB69E21004420AC /* FITSettingsTableViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FITSettingsTableViewCell.h; sourceTree = "<group>"; };
+		797ED8231BB69E21004420AC /* FITSettingsTableViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FITSettingsTableViewCell.m; sourceTree = "<group>"; };
+		797ED8261BB6B748004420AC /* FITProductDetailViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FITProductDetailViewController.h; sourceTree = "<group>"; };
+		797ED8271BB6B748004420AC /* FITProductDetailViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FITProductDetailViewController.m; sourceTree = "<group>"; };
+		797ED82A1BB6B853004420AC /* FITProductImageTableViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FITProductImageTableViewCell.h; sourceTree = "<group>"; };
+		797ED82B1BB6B853004420AC /* FITProductImageTableViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FITProductImageTableViewCell.m; sourceTree = "<group>"; };
+		797ED82D1BB6BA35004420AC /* FITProductDetailTableViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FITProductDetailTableViewCell.h; sourceTree = "<group>"; };
+		797ED82E1BB6BA35004420AC /* FITProductDetailTableViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FITProductDetailTableViewCell.m; sourceTree = "<group>"; };
+		797ED8301BB6C930004420AC /* FITProductTitleTableViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FITProductTitleTableViewCell.h; sourceTree = "<group>"; };
+		797ED8311BB6C930004420AC /* FITProductTitleTableViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FITProductTitleTableViewCell.m; sourceTree = "<group>"; };
+		797ED8331BB6C960004420AC /* FITProductInfoTableViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FITProductInfoTableViewCell.h; sourceTree = "<group>"; };
+		797ED8341BB6C960004420AC /* FITProductInfoTableViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FITProductInfoTableViewCell.m; sourceTree = "<group>"; };
+		797ED8361BB6CD3D004420AC /* FITProductLongTextTableViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FITProductLongTextTableViewCell.h; sourceTree = "<group>"; };
+		797ED8371BB6CD3D004420AC /* FITProductLongTextTableViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FITProductLongTextTableViewCell.m; sourceTree = "<group>"; };
+		79810D5B1BB883DE00A5D5C0 /* FITSelectionPresenter.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FITSelectionPresenter.h; sourceTree = "<group>"; };
+		79810D5C1BB883DE00A5D5C0 /* FITSelectionPresenter.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FITSelectionPresenter.m; sourceTree = "<group>"; };
+		79810D5E1BB94DF000A5D5C0 /* FITSmallDishSelectionCollectionViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FITSmallDishSelectionCollectionViewCell.h; sourceTree = "<group>"; };
+		79810D5F1BB94DF100A5D5C0 /* FITSmallDishSelectionCollectionViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FITSmallDishSelectionCollectionViewCell.m; sourceTree = "<group>"; };
+		79810D611BB9D0D300A5D5C0 /* FITShoppingListPresenter.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FITShoppingListPresenter.h; sourceTree = "<group>"; };
+		79810D621BB9D0D300A5D5C0 /* FITShoppingListPresenter.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FITShoppingListPresenter.m; sourceTree = "<group>"; };
+		79810D641BBA699900A5D5C0 /* FITHomeEmptyCollectionViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FITHomeEmptyCollectionViewCell.h; sourceTree = "<group>"; };
+		79810D651BBA699900A5D5C0 /* FITHomeEmptyCollectionViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FITHomeEmptyCollectionViewCell.m; sourceTree = "<group>"; };
+		799681051BB874070043D34C /* FITEmptyPlanCollectionViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FITEmptyPlanCollectionViewCell.h; sourceTree = "<group>"; };
+		799681061BB874070043D34C /* FITEmptyPlanCollectionViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FITEmptyPlanCollectionViewCell.m; sourceTree = "<group>"; };
+		799681081BB880950043D34C /* FITBigDishSelectionCollectionViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FITBigDishSelectionCollectionViewCell.h; sourceTree = "<group>"; };
+		799681091BB880950043D34C /* FITBigDishSelectionCollectionViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FITBigDishSelectionCollectionViewCell.m; sourceTree = "<group>"; };
+		7996810B1BB880B30043D34C /* FITBigDishSelectionFlowLayout.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FITBigDishSelectionFlowLayout.h; sourceTree = "<group>"; };
+		7996810C1BB880B30043D34C /* FITBigDishSelectionFlowLayout.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FITBigDishSelectionFlowLayout.m; sourceTree = "<group>"; };
+		79AAA7261BB7F6750010ED38 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/Localizable.strings; sourceTree = "<group>"; };
+		79AAA7291BB7F7260010ED38 /* pl */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = pl; path = pl.lproj/Localizable.strings; sourceTree = "<group>"; };
+		79AAA72A1BB7F7260010ED38 /* pl */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = pl; path = pl.lproj/InfoPlist.strings; sourceTree = "<group>"; };
+		79AAA72E1BB80DAD0010ED38 /* en */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = en; path = en.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
+		79AAA7341BB8198B0010ED38 /* FITDishEntity.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FITDishEntity.h; sourceTree = "<group>"; };
+		79AAA7351BB8198B0010ED38 /* FITDishEntity.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FITDishEntity.m; sourceTree = "<group>"; };
+		79AAA73A1BB82DC50010ED38 /* FITProductEntity.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FITProductEntity.h; sourceTree = "<group>"; };
+		79AAA73B1BB82DC50010ED38 /* FITProductEntity.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FITProductEntity.m; sourceTree = "<group>"; };
+		79AAA7451BB841550010ED38 /* FITHomePresenter.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FITHomePresenter.h; sourceTree = "<group>"; };
+		79AAA7461BB841550010ED38 /* FITHomePresenter.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FITHomePresenter.m; sourceTree = "<group>"; };
+		79AAA74C1BB844510010ED38 /* FITNewDishViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FITNewDishViewController.h; sourceTree = "<group>"; };
+		79AAA74D1BB844510010ED38 /* FITNewDishViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FITNewDishViewController.m; sourceTree = "<group>"; };
+		79AAA7501BB8473E0010ED38 /* FITNewDishTableViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FITNewDishTableViewCell.h; sourceTree = "<group>"; };
+		79AAA7511BB8473E0010ED38 /* FITNewDishTableViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FITNewDishTableViewCell.m; sourceTree = "<group>"; };
+		79AAA7531BB85DDA0010ED38 /* FITDayEntity.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FITDayEntity.h; sourceTree = "<group>"; };
+		79AAA7541BB85DDA0010ED38 /* FITDayEntity.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FITDayEntity.m; sourceTree = "<group>"; };
 		814C3AB61B69864600E307BB /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
 		814C3ABC1B69864600E307BB /* Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		81A6CA601A2EA82800297C39 /* libstdc++.6.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; name = "libstdc++.6.dylib"; path = "usr/lib/libstdc++.6.dylib"; sourceTree = SDKROOT; };
@@ -160,6 +227,7 @@
 			isa = PBXGroup;
 			children = (
 				09ABC07713A1D52D009C3FCF /* Fitsei */,
+				24DF63EE1BB577FC00A1B62F /* Images.xcassets */,
 				814C3AB11B69864600E307BB /* Resources */,
 				09ABC07013A1D52D009C3FCF /* Frameworks */,
 				09ABC06E13A1D52D009C3FCF /* Products */,
@@ -188,6 +256,7 @@
 		09ABC07713A1D52D009C3FCF /* Fitsei */ = {
 			isa = PBXGroup;
 			children = (
+				79AAA7331BB8194D0010ED38 /* Backend */,
 				797ED8191BB68293004420AC /* Presenter */,
 				241141B11BB55A930039591B /* Main */,
 				241141B21BB55A980039591B /* Controller */,
@@ -201,13 +270,9 @@
 		09ABC07813A1D52D009C3FCF /* Other Sources */ = {
 			isa = PBXGroup;
 			children = (
-				24DF63F01BB579EF00A1B62F /* UIImageEffects.h */,
-				24DF63F11BB579EF00A1B62F /* UIImageEffects.m */,
-				09ABC07E13A1D52D009C3FCF /* main.m */,
-				241141B51BB55D390039591B /* FITPrefixHeader.pch */,
-				24DF63E21BB560E400A1B62F /* Consts.h */,
-				797ED7FB1BB5F3A6004420AC /* UIColor+Hex.h */,
-				797ED7FC1BB5F3A6004420AC /* UIColor+Hex.m */,
+				79AAA7271BB7F6750010ED38 /* Localizable.strings */,
+				79AAA7561BB85E350010ED38 /* Consts */,
+				79AAA7571BB85E460010ED38 /* Other */,
 			);
 			name = "Other Sources";
 			sourceTree = "<group>";
@@ -216,7 +281,7 @@
 			isa = PBXGroup;
 			children = (
 				241141AE1BB55A850039591B /* DrawerStoryboard.storyboard */,
-				797ED7F11BB5AA2E004420AC /* LaunchScreen.storyboard */,
+				79AAA72D1BB80DAA0010ED38 /* LaunchScreen.storyboard */,
 			);
 			name = View;
 			sourceTree = "<group>";
@@ -235,10 +300,13 @@
 			children = (
 				24DF63E71BB5720300A1B62F /* Base */,
 				24DF63DA1BB5604800A1B62F /* Drawer */,
-				797ED8011BB616A0004420AC /* Plan */,
 				24DF63E31BB5614A00A1B62F /* Home */,
-				797ED80E1BB64137004420AC /* Shopping */,
+				797ED8011BB616A0004420AC /* Plan */,
+				797ED80E1BB64137004420AC /* ShoppingList */,
 				797ED81D1BB69A66004420AC /* Settings */,
+				797ED8251BB6B72E004420AC /* ProductDetail */,
+				792021481BB7D03E00B9E056 /* DishSelection */,
+				79AAA7481BB842C70010ED38 /* NewDish */,
 			);
 			name = Controller;
 			sourceTree = "<group>";
@@ -291,6 +359,16 @@
 			name = Base;
 			sourceTree = "<group>";
 		};
+		792021481BB7D03E00B9E056 /* DishSelection */ = {
+			isa = PBXGroup;
+			children = (
+				7996810E1BB880BF0043D34C /* Cell */,
+				792021491BB7D0CC00B9E056 /* FITDishSelectionViewController.h */,
+				7920214A1BB7D0CC00B9E056 /* FITDishSelectionViewController.m */,
+			);
+			name = DishSelection;
+			sourceTree = "<group>";
+		};
 		797ED7F71BB5BFCC004420AC /* Cell */ = {
 			isa = PBXGroup;
 			children = (
@@ -298,6 +376,8 @@
 				797ED7F51BB5BFC8004420AC /* FITHomeCollectionViewCell.m */,
 				797ED7F81BB5E663004420AC /* FITHomeFlowLayout.h */,
 				797ED7F91BB5E663004420AC /* FITHomeFlowLayout.m */,
+				79810D641BBA699900A5D5C0 /* FITHomeEmptyCollectionViewCell.h */,
+				79810D651BBA699900A5D5C0 /* FITHomeEmptyCollectionViewCell.m */,
 			);
 			name = Cell;
 			sourceTree = "<group>";
@@ -312,14 +392,14 @@
 			name = Plan;
 			sourceTree = "<group>";
 		};
-		797ED80E1BB64137004420AC /* Shopping */ = {
+		797ED80E1BB64137004420AC /* ShoppingList */ = {
 			isa = PBXGroup;
 			children = (
 				797ED8121BB6507D004420AC /* Cell */,
 				797ED80F1BB64153004420AC /* FITShoppingViewController.h */,
 				797ED8101BB64153004420AC /* FITShoppingViewController.m */,
 			);
-			name = Shopping;
+			name = ShoppingList;
 			sourceTree = "<group>";
 		};
 		797ED8121BB6507D004420AC /* Cell */ = {
@@ -338,6 +418,12 @@
 			children = (
 				797ED81A1BB68326004420AC /* FITDietPlanPresenter.h */,
 				797ED81B1BB68326004420AC /* FITDietPlanPresenter.m */,
+				79AAA7451BB841550010ED38 /* FITHomePresenter.h */,
+				79AAA7461BB841550010ED38 /* FITHomePresenter.m */,
+				79810D5B1BB883DE00A5D5C0 /* FITSelectionPresenter.h */,
+				79810D5C1BB883DE00A5D5C0 /* FITSelectionPresenter.m */,
+				79810D611BB9D0D300A5D5C0 /* FITShoppingListPresenter.h */,
+				79810D621BB9D0D300A5D5C0 /* FITShoppingListPresenter.m */,
 			);
 			name = Presenter;
 			sourceTree = "<group>";
@@ -347,6 +433,8 @@
 			children = (
 				797ED81E1BB69A7E004420AC /* FITSettingsViewController.h */,
 				797ED81F1BB69A7E004420AC /* FITSettingsViewController.m */,
+				797ED8221BB69E21004420AC /* FITSettingsTableViewCell.h */,
+				797ED8231BB69E21004420AC /* FITSettingsTableViewCell.m */,
 			);
 			name = Settings;
 			sourceTree = "<group>";
@@ -360,8 +448,111 @@
 				797ED8091BB61BB4004420AC /* FITSmallPlanCollectionViewCell.m */,
 				797ED80B1BB6232B004420AC /* FITBigPlanFlowLayout.h */,
 				797ED80C1BB6232B004420AC /* FITBigPlanFlowLayout.m */,
+				799681051BB874070043D34C /* FITEmptyPlanCollectionViewCell.h */,
+				799681061BB874070043D34C /* FITEmptyPlanCollectionViewCell.m */,
 			);
 			name = Cell;
+			sourceTree = "<group>";
+		};
+		797ED8251BB6B72E004420AC /* ProductDetail */ = {
+			isa = PBXGroup;
+			children = (
+				797ED8291BB6B837004420AC /* Cell */,
+				797ED8261BB6B748004420AC /* FITProductDetailViewController.h */,
+				797ED8271BB6B748004420AC /* FITProductDetailViewController.m */,
+			);
+			name = ProductDetail;
+			sourceTree = "<group>";
+		};
+		797ED8291BB6B837004420AC /* Cell */ = {
+			isa = PBXGroup;
+			children = (
+				797ED82A1BB6B853004420AC /* FITProductImageTableViewCell.h */,
+				797ED82B1BB6B853004420AC /* FITProductImageTableViewCell.m */,
+				797ED82D1BB6BA35004420AC /* FITProductDetailTableViewCell.h */,
+				797ED82E1BB6BA35004420AC /* FITProductDetailTableViewCell.m */,
+				797ED8301BB6C930004420AC /* FITProductTitleTableViewCell.h */,
+				797ED8311BB6C930004420AC /* FITProductTitleTableViewCell.m */,
+				797ED8331BB6C960004420AC /* FITProductInfoTableViewCell.h */,
+				797ED8341BB6C960004420AC /* FITProductInfoTableViewCell.m */,
+				797ED8361BB6CD3D004420AC /* FITProductLongTextTableViewCell.h */,
+				797ED8371BB6CD3D004420AC /* FITProductLongTextTableViewCell.m */,
+			);
+			name = Cell;
+			sourceTree = "<group>";
+		};
+		7996810E1BB880BF0043D34C /* Cell */ = {
+			isa = PBXGroup;
+			children = (
+				799681081BB880950043D34C /* FITBigDishSelectionCollectionViewCell.h */,
+				799681091BB880950043D34C /* FITBigDishSelectionCollectionViewCell.m */,
+				7996810B1BB880B30043D34C /* FITBigDishSelectionFlowLayout.h */,
+				7996810C1BB880B30043D34C /* FITBigDishSelectionFlowLayout.m */,
+				79810D5E1BB94DF000A5D5C0 /* FITSmallDishSelectionCollectionViewCell.h */,
+				79810D5F1BB94DF100A5D5C0 /* FITSmallDishSelectionCollectionViewCell.m */,
+			);
+			name = Cell;
+			sourceTree = "<group>";
+		};
+		79AAA7331BB8194D0010ED38 /* Backend */ = {
+			isa = PBXGroup;
+			children = (
+				79AAA73D1BB835D00010ED38 /* Parse */,
+			);
+			name = Backend;
+			sourceTree = "<group>";
+		};
+		79AAA73D1BB835D00010ED38 /* Parse */ = {
+			isa = PBXGroup;
+			children = (
+				79AAA7341BB8198B0010ED38 /* FITDishEntity.h */,
+				79AAA7351BB8198B0010ED38 /* FITDishEntity.m */,
+				79AAA73A1BB82DC50010ED38 /* FITProductEntity.h */,
+				79AAA73B1BB82DC50010ED38 /* FITProductEntity.m */,
+				79AAA7531BB85DDA0010ED38 /* FITDayEntity.h */,
+				79AAA7541BB85DDA0010ED38 /* FITDayEntity.m */,
+			);
+			name = Parse;
+			sourceTree = "<group>";
+		};
+		79AAA7481BB842C70010ED38 /* NewDish */ = {
+			isa = PBXGroup;
+			children = (
+				79AAA74F1BB847250010ED38 /* Cell */,
+				79AAA74C1BB844510010ED38 /* FITNewDishViewController.h */,
+				79AAA74D1BB844510010ED38 /* FITNewDishViewController.m */,
+			);
+			name = NewDish;
+			sourceTree = "<group>";
+		};
+		79AAA74F1BB847250010ED38 /* Cell */ = {
+			isa = PBXGroup;
+			children = (
+				79AAA7501BB8473E0010ED38 /* FITNewDishTableViewCell.h */,
+				79AAA7511BB8473E0010ED38 /* FITNewDishTableViewCell.m */,
+			);
+			name = Cell;
+			sourceTree = "<group>";
+		};
+		79AAA7561BB85E350010ED38 /* Consts */ = {
+			isa = PBXGroup;
+			children = (
+				241141B51BB55D390039591B /* FITPrefixHeader.pch */,
+				24DF63E21BB560E400A1B62F /* Consts.h */,
+			);
+			name = Consts;
+			sourceTree = "<group>";
+		};
+		79AAA7571BB85E460010ED38 /* Other */ = {
+			isa = PBXGroup;
+			children = (
+				24DF63F01BB579EF00A1B62F /* UIImageEffects.h */,
+				24DF63F11BB579EF00A1B62F /* UIImageEffects.m */,
+				09ABC07E13A1D52D009C3FCF /* main.m */,
+				797ED7FB1BB5F3A6004420AC /* UIColor+Hex.h */,
+				797ED7FC1BB5F3A6004420AC /* UIColor+Hex.m */,
+			);
+			name = Other;
 			sourceTree = "<group>";
 		};
 		814C3AB11B69864600E307BB /* Resources */ = {
@@ -369,7 +560,6 @@
 			children = (
 				814C3AB51B69864600E307BB /* InfoPlist.strings */,
 				814C3ABC1B69864600E307BB /* Info.plist */,
-				24DF63EE1BB577FC00A1B62F /* Images.xcassets */,
 			);
 			path = Resources;
 			sourceTree = "<group>";
@@ -438,6 +628,11 @@
 				CLASSPREFIX = FIT;
 				LastUpgradeCheck = 0510;
 				ORGANIZATIONNAME = "Konrad Roj";
+				TargetAttributes = {
+					09ABC06C13A1D52D009C3FCF = {
+						DevelopmentTeam = SLFN2KZNPW;
+					};
+				};
 			};
 			buildConfigurationList = 09ABC06713A1D52D009C3FCF /* Build configuration list for PBXProject "Fitsei" */;
 			compatibilityVersion = "Xcode 3.2";
@@ -445,6 +640,7 @@
 			hasScannedForEncodings = 0;
 			knownRegions = (
 				en,
+				pl,
 			);
 			mainGroup = 09ABC06213A1D52D009C3FCF;
 			productRefGroup = 09ABC06E13A1D52D009C3FCF /* Products */;
@@ -461,8 +657,9 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				79AAA7251BB7F6750010ED38 /* Localizable.strings in Resources */,
 				241141AF1BB55A850039591B /* DrawerStoryboard.storyboard in Resources */,
-				797ED7F21BB5AA2E004420AC /* LaunchScreen.storyboard in Resources */,
+				79AAA72B1BB80DAA0010ED38 /* LaunchScreen.storyboard in Resources */,
 				24DF63EF1BB577FC00A1B62F /* Images.xcassets in Resources */,
 				814C3AC01B69864600E307BB /* InfoPlist.strings in Resources */,
 			);
@@ -522,28 +719,49 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				79AAA73C1BB82DC50010ED38 /* FITProductEntity.m in Sources */,
+				797ED8281BB6B748004420AC /* FITProductDetailViewController.m in Sources */,
 				24DF63D61BB55F6D00A1B62F /* FITLeftMenuViewController.m in Sources */,
+				79AAA74E1BB844510010ED38 /* FITNewDishViewController.m in Sources */,
+				797ED82C1BB6B853004420AC /* FITProductImageTableViewCell.m in Sources */,
+				79AAA7521BB8473E0010ED38 /* FITNewDishTableViewCell.m in Sources */,
 				797ED8201BB69A7E004420AC /* FITSettingsViewController.m in Sources */,
+				797ED82F1BB6BA35004420AC /* FITProductDetailTableViewCell.m in Sources */,
+				79810D631BB9D0D300A5D5C0 /* FITShoppingListPresenter.m in Sources */,
 				797ED7F61BB5BFC8004420AC /* FITHomeCollectionViewCell.m in Sources */,
 				797ED80A1BB61BB4004420AC /* FITSmallPlanCollectionViewCell.m in Sources */,
 				241141AD1BB55A0E0039591B /* FITDrawerViewController.m in Sources */,
 				09ABC07F13A1D52D009C3FCF /* main.m in Sources */,
 				797ED8071BB61B9F004420AC /* FITBigPlanCollectionViewCell.m in Sources */,
 				24DF63EA1BB5721700A1B62F /* FITNavigationViewController.m in Sources */,
+				79AAA7361BB8198B0010ED38 /* FITDishEntity.m in Sources */,
 				797ED80D1BB6232C004420AC /* FITBigPlanFlowLayout.m in Sources */,
+				797ED8321BB6C930004420AC /* FITProductTitleTableViewCell.m in Sources */,
+				79810D601BB94DF100A5D5C0 /* FITSmallDishSelectionCollectionViewCell.m in Sources */,
+				797ED8351BB6C960004420AC /* FITProductInfoTableViewCell.m in Sources */,
+				797ED8381BB6CD3D004420AC /* FITProductLongTextTableViewCell.m in Sources */,
 				24DF63E11BB5607600A1B62F /* FITRightMenuTableViewCell.m in Sources */,
 				24DF63DE1BB5606D00A1B62F /* FITLeftMenuTableViewCell.m in Sources */,
+				799681071BB874070043D34C /* FITEmptyPlanCollectionViewCell.m in Sources */,
+				79AAA7551BB85DDA0010ED38 /* FITDayEntity.m in Sources */,
 				797ED7FA1BB5E663004420AC /* FITHomeFlowLayout.m in Sources */,
+				7996810D1BB880B30043D34C /* FITBigDishSelectionFlowLayout.m in Sources */,
+				79AAA7471BB841550010ED38 /* FITHomePresenter.m in Sources */,
 				797ED8181BB653D7004420AC /* FITShoppingHeaderView.m in Sources */,
 				24DF63E61BB5615B00A1B62F /* FITHomeViewController.m in Sources */,
+				79810D661BBA699900A5D5C0 /* FITHomeEmptyCollectionViewCell.m in Sources */,
 				797ED8111BB64153004420AC /* FITShoppingViewController.m in Sources */,
+				7996810A1BB880950043D34C /* FITBigDishSelectionCollectionViewCell.m in Sources */,
 				797ED8001BB5FDA5004420AC /* FITLogoTableViewCell.m in Sources */,
+				7920214B1BB7D0CD00B9E056 /* FITDishSelectionViewController.m in Sources */,
 				24DF63ED1BB5736200A1B62F /* FITBaseViewController.m in Sources */,
 				24DF63D91BB55F7A00A1B62F /* FITRightMenuViewController.m in Sources */,
 				797ED7FD1BB5F3A6004420AC /* UIColor+Hex.m in Sources */,
+				79810D5D1BB883DE00A5D5C0 /* FITSelectionPresenter.m in Sources */,
 				09ABC08213A1D52D009C3FCF /* AppDelegate.m in Sources */,
 				24DF63F21BB579EF00A1B62F /* UIImageEffects.m in Sources */,
 				797ED8151BB650A4004420AC /* FITShoppingProductTableViewCell.m in Sources */,
+				797ED8241BB69E21004420AC /* FITSettingsTableViewCell.m in Sources */,
 				797ED8041BB616BC004420AC /* FITPlanViewController.m in Sources */,
 				797ED81C1BB68326004420AC /* FITDietPlanPresenter.m in Sources */,
 			);
@@ -552,10 +770,28 @@
 /* End PBXSourcesBuildPhase section */
 
 /* Begin PBXVariantGroup section */
+		79AAA7271BB7F6750010ED38 /* Localizable.strings */ = {
+			isa = PBXVariantGroup;
+			children = (
+				79AAA7261BB7F6750010ED38 /* en */,
+				79AAA7291BB7F7260010ED38 /* pl */,
+			);
+			name = Localizable.strings;
+			sourceTree = "<group>";
+		};
+		79AAA72D1BB80DAA0010ED38 /* LaunchScreen.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				79AAA72E1BB80DAD0010ED38 /* en */,
+			);
+			name = LaunchScreen.storyboard;
+			sourceTree = "<group>";
+		};
 		814C3AB51B69864600E307BB /* InfoPlist.strings */ = {
 			isa = PBXVariantGroup;
 			children = (
 				814C3AB61B69864600E307BB /* en */,
+				79AAA72A1BB7F7260010ED38 /* pl */,
 			);
 			name = InfoPlist.strings;
 			sourceTree = "<group>";
@@ -596,6 +832,7 @@
 				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = BrandAsset;
 				CLANG_ENABLE_OBJC_ARC = YES;
 				CODE_SIGN_IDENTITY = "iPhone Developer";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				COPY_PHASE_STRIP = NO;
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(inherited)",
@@ -609,6 +846,7 @@
 				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
 				PRODUCT_BUNDLE_IDENTIFIER = com.konradroj.Fitsei;
 				PRODUCT_NAME = Fitsei;
+				PROVISIONING_PROFILE = "";
 				WRAPPER_EXTENSION = app;
 			};
 			name = Debug;
@@ -621,6 +859,7 @@
 				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = BrandAsset;
 				CLANG_ENABLE_OBJC_ARC = YES;
 				CODE_SIGN_IDENTITY = "iPhone Developer";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				COPY_PHASE_STRIP = YES;
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(inherited)",
@@ -633,6 +872,7 @@
 				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
 				PRODUCT_BUNDLE_IDENTIFIER = com.konradroj.Fitsei;
 				PRODUCT_NAME = Fitsei;
+				PROVISIONING_PROFILE = "";
 				VALIDATE_PRODUCT = YES;
 				WRAPPER_EXTENSION = app;
 			};

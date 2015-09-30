@@ -14,11 +14,6 @@
 
 @implementation FITBaseViewController
 
-- (void)viewDidLoad {
-    [super viewDidLoad];
-
-}
-
 - (void)openLeftView {
     [FITMainViewController showLeftViewAnimated:YES completionHandler:nil];
 }
@@ -41,6 +36,18 @@
     UIImage *image = [[UIImage imageNamed:@"hamburger"] imageWithRenderingMode:UIImageRenderingModeAlwaysTemplate];
     self.navigationItem.rightBarButtonItem = [[UIBarButtonItem alloc] initWithImage:image style:UIBarButtonItemStylePlain target:self action:@selector(openLeftView)];
     self.navigationItem.rightBarButtonItem.tintColor = [UIColor whiteColor];
+}
+
+- (void)addTwoBarRight {
+    UIImage *hamburger = [[UIImage imageNamed:@"hamburger"] imageWithRenderingMode:UIImageRenderingModeAlwaysTemplate];
+    
+    UIImage *calendar = [[UIImage imageNamed:@"calendar"] imageWithRenderingMode:UIImageRenderingModeAlwaysTemplate];
+    
+    UIBarButtonItem *right = [[UIBarButtonItem alloc] initWithImage:calendar style:UIBarButtonItemStylePlain target:self action:@selector(openRightView)];
+    
+    UIBarButtonItem *left = [[UIBarButtonItem alloc] initWithImage:hamburger style:UIBarButtonItemStylePlain target:self action:@selector(openLeftView)];
+    
+    [self.navigationItem setRightBarButtonItems:[NSArray arrayWithObjects:left, right, nil]];
 }
 
 @end

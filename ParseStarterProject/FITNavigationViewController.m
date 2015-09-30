@@ -17,7 +17,9 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
     
-    self.statusBarView = [[UIView alloc] initWithFrame:CGRectMake(0, 0, 600, 22)];
+    [[UIApplication sharedApplication] setStatusBarStyle:UIStatusBarStyleLightContent];
+    
+    self.statusBarView = [[UIView alloc] initWithFrame:CGRectMake(0, 0, SCREEN_WIDTH, 22)];
     self.statusBarView.backgroundColor  =  [UIColor clearColor];
     [self.view addSubview:self.statusBarView];
 
@@ -48,6 +50,18 @@
             self.navigationBar.backgroundColor = toColor;
         }];
     }
+}
+
+- (void)animateNavigationBarTintToColor:(UIColor *)toColor duration:(NSTimeInterval)duration {
+    [UIView animateWithDuration:duration animations:^{
+        self.navigationBar.barTintColor = [UIColor clearColor];
+        self.navigationBar.tintColor = toColor;
+
+        NSMutableDictionary *attributes = [NSMutableDictionary dictionary];
+        [attributes setValue:[UIFont systemFontOfSize:17.0f weight:UIFontWeightUltraLight] forKey:NSFontAttributeName];
+        [attributes setValue:toColor forKey:NSForegroundColorAttributeName];
+        self.navigationBar.titleTextAttributes = attributes;
+    }];
 }
 
 @end

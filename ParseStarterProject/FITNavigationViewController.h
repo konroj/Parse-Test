@@ -11,5 +11,6 @@
 @interface FITNavigationViewController : UINavigationController
 
 - (void)animateNavigationBarFromColor:(UIColor *)fromColor toColor:(UIColor *)toColor duration:(NSTimeInterval)duration;
+- (void)animateNavigationBarTintToColor:(UIColor *)toColor duration:(NSTimeInterval)duration;
 
 @end

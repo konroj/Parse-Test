@@ -8,7 +8,14 @@
 
 #import <UIKit/UIKit.h>
 
+@protocol RightMenuDelegate <NSObject>
+
+- (void)didSelectRightMenuIndex:(NSInteger)index;
+
+@end
+
 @interface FITRightMenuViewController : UITableViewController
 @property (strong, nonatomic) UIColor *tintColor;
+@property (weak, nonatomic) id<RightMenuDelegate> delegate;
 
 @end

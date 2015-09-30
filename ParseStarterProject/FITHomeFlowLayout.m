@@ -11,7 +11,10 @@
 @implementation FITHomeFlowLayout
 
 - (void)awakeFromNib {
-    self.itemSize = CGSizeMake(self.collectionView.frame.size.width - 70.0f, self.collectionView.frame.size.height);
+    self.itemSize = CGSizeMake(self.collectionView.frame.size.width - 70.0f, self.collectionView.frame.size.height - 5.0f);
+    if (IS_IPHONE_4_OR_LESS) {
+        self.itemSize = CGSizeMake(self.collectionView.frame.size.width - 100.0f, self.collectionView.frame.size.height - 5.0f);
+    }
     self.minimumInteritemSpacing = 15;
     self.minimumLineSpacing = 15;
     self.scrollDirection = UICollectionViewScrollDirectionHorizontal;

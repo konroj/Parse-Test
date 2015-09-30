@@ -8,8 +8,9 @@
 
 #import <UIKit/UIKit.h>
 
-@interface FITShoppingProductTableViewCell : UITableViewCell
+@interface FITShoppingProductTableViewCell : SWTableViewCell
 @property (weak, nonatomic) IBOutlet UILabel *sizeLabel;
 @property (weak, nonatomic) IBOutlet UILabel *productLabel;
+@property (weak, nonatomic) IBOutlet UIView *separator;
 
 @end

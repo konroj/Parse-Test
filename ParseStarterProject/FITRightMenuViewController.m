@@ -18,22 +18,12 @@
 - (void)awakeFromNib {
     [super awakeFromNib];
     
-    self.titlesArray = @[@"Set VC",
-                     @"Open Left View",
-                     @"",
-                     @"1",
-                     @"2",
-                     @"3",
-                     @"4",
-                     @"5",
-                     @"6",
-                     @"7",
-                     @"8",
-                     @"9",
-                     @"10"];
+    self.titlesArray = @[NSLocalizedString(@"This week", nil), NSLocalizedString(@"Next week", nil)];
     
     self.tableView.separatorStyle = UITableViewCellSelectionStyleNone;
     self.tableView.showsVerticalScrollIndicator = NO;
+    
+    self.tableView.contentInset = UIEdgeInsetsMake(67.0f, 0.f, 67.0f, 0.f);
 }
 
 - (void)viewDidLoad {
@@ -65,53 +55,33 @@
 
 #pragma mark - UITableView Delegate
 
-- (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath
-{
+- (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath {
     FITRightMenuTableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:@"cell"];
     
-    cell.textLabel.text = _titlesArray[indexPath.row];
-    if (indexPath.row < 3) {
-        cell.textLabel.font = [UIFont boldSystemFontOfSize:15.f];
-    } else {
-        cell.textLabel.font = [UIFont boldSystemFontOfSize:30.f];
-    }
-    //cell.separatorView.hidden = !(indexPath.row != _titlesArray.count-1 && indexPath.row != 1 && indexPath.row != 2);
-    cell.userInteractionEnabled = (indexPath.row != 2);
-    
-    cell.tintColor = _tintColor;
+    cell.textLabel.text = self.titlesArray[indexPath.row];
+    cell.textLabel.numberOfLines = 2;
+    cell.textLabel.font = [UIFont systemFontOfSize:13.0f weight:UIFontWeightThin];
+    cell.textLabel.textColor = [UIColor whiteColor];
+
+    cell.backgroundColor = [UIColor clearColor];
     
     return cell;
 }
 
 - (CGFloat)tableView:(UITableView *)tableView heightForRowAtIndexPath:(NSIndexPath *)indexPath {
-    if (indexPath.row == 2) return 50.f;
-    else return 100.f;
+    return 100.f;
 }
 
 - (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath {
-    if (indexPath.row == 0) {
-        FITHomeViewController *viewController = [FITNavigationController viewControllers].firstObject;
-        
-        UIViewController *viewController2 = [self.storyboard instantiateViewControllerWithIdentifier:@"HomeViewController"];
-        viewController2.title = @"Test";
-        
-        [FITNavigationController setViewControllers:@[viewController, viewController2]];
-        
-        [FITMainViewController hideRightViewAnimated:YES completionHandler:nil];
-    } else if (indexPath.row == 1) {
-        if (![FITMainViewController isRightViewAlwaysVisible]) {
-            [FITMainViewController hideRightViewAnimated:YES completionHandler:^(void) {
-                 [FITMainViewController showLeftViewAnimated:YES completionHandler:nil];
-            }];
-        }
-        else [FITMainViewController showLeftViewAnimated:YES completionHandler:nil];
-    } else {
-        UIViewController *viewController = [self.storyboard instantiateViewControllerWithIdentifier:@"HomeViewController"];
-        viewController.title = [NSString stringWithFormat:@"Test %@", _titlesArray[indexPath.row]];
-        [FITNavigationController pushViewController:viewController animated:YES];
-        
-        [FITMainViewController hideRightViewAnimated:YES completionHandler:nil];
+    [tableView deselectRowAtIndexPath:indexPath animated:YES];
+
+    if ([self.delegate respondsToSelector:@selector(didSelectRightMenuIndex:)]) {
+        [self.delegate didSelectRightMenuIndex:indexPath.row];
     }
+    
+    dispatch_after(dispatch_time(DISPATCH_TIME_NOW, 0.3 * NSEC_PER_SEC), dispatch_get_main_queue(), ^{
+        [FITMainViewController hideRightViewAnimated:YES completionHandler:nil];
+    });
 }
 
 @end

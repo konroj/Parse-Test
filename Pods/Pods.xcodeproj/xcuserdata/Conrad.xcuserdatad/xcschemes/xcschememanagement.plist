@@ -4,12 +4,22 @@
 <dict>
 	<key>SchemeUserState</key>
 	<dict>
+		<key>AFNetworking.xcscheme</key>
+		<dict>
+			<key>isShown</key>
+			<false/>
+		</dict>
 		<key>Bolts.xcscheme</key>
 		<dict>
 			<key>isShown</key>
 			<false/>
 		</dict>
 		<key>LGSideMenuController.xcscheme</key>
+		<dict>
+			<key>isShown</key>
+			<false/>
+		</dict>
+		<key>M13OrderedDictionary.xcscheme</key>
 		<dict>
 			<key>isShown</key>
 			<false/>
@@ -29,30 +39,50 @@
 			<key>isShown</key>
 			<false/>
 		</dict>
+		<key>SWTableViewCell.xcscheme</key>
+		<dict>
+			<key>isShown</key>
+			<false/>
+		</dict>
 	</dict>
 	<key>SuppressBuildableAutocreation</key>
 	<dict>
-		<key>15E2EAE86719803FDB87F772797E0F6B</key>
+		<key>06C9E68F2FDF7D03516676F9D68889D2</key>
 		<dict>
 			<key>primary</key>
 			<true/>
 		</dict>
-		<key>54F3B353FAD1BEC8861B569205402F0E</key>
+		<key>10A38C8F2067B5E629506BBEE8D56BC2</key>
 		<dict>
 			<key>primary</key>
 			<true/>
 		</dict>
-		<key>628CFFA2EF986A6778E19E2C703191D8</key>
+		<key>2829F182486289B98D051F69781B7103</key>
 		<dict>
 			<key>primary</key>
 			<true/>
 		</dict>
-		<key>BE6BAACAEFD3D721F10472792B220E35</key>
+		<key>39CB381BBD12E42BF468A2765F79F90B</key>
 		<dict>
 			<key>primary</key>
 			<true/>
 		</dict>
-		<key>CFF3BF8638A11F26220F4BFD5720C503</key>
+		<key>3AF691CC516F0A2F40692E9F3CC69CC9</key>
+		<dict>
+			<key>primary</key>
+			<true/>
+		</dict>
+		<key>437F61F1160634D521D4FC24A0AB7DA9</key>
+		<dict>
+			<key>primary</key>
+			<true/>
+		</dict>
+		<key>C9F11AB09A67792403473F31F13264FB</key>
+		<dict>
+			<key>primary</key>
+			<true/>
+		</dict>
+		<key>CDE0B7668B6EC1B2BF166A65E070AF5E</key>
 		<dict>
 			<key>primary</key>
 			<true/>

@@ -16,9 +16,9 @@
 @property (weak, nonatomic) IBOutlet UILabel *dishTitle;
 @property (weak, nonatomic) IBOutlet UIImageView *leftDot;
 @property (weak, nonatomic) IBOutlet UIImageView *middleDot;
+@property (weak, nonatomic) IBOutlet UIImageView *rightDot;
 @property (weak, nonatomic) IBOutlet UILabel *leftLabel;
 @property (weak, nonatomic) IBOutlet UILabel *middleLabel;
 @property (weak, nonatomic) IBOutlet UILabel *rightLabel;
-@property (weak, nonatomic) IBOutlet UIImageView *rightDot;
 
 @end

@@ -10,4 +10,9 @@
 
 @interface FITPlanViewController : FITBaseViewController
 
+@property (strong, nonatomic) NSArray *dates;
+@property (strong, nonatomic) NSArray *dayList;
+
+- (void)reloadPlanView;
+
 @end

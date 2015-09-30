@@ -9,5 +9,5 @@
 #import <UIKit/UIKit.h>
 
 @interface FITShoppingHeaderView : UIView
-
+@property (strong, nonatomic) UILabel *textLabel;
 @end

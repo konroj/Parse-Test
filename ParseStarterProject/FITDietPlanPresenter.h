@@ -10,7 +10,8 @@
 
 @interface FITDietPlanPresenter : NSObject
 
-+ (NSArray *)datesInWeek:(NSInteger)weekNumber;
-+ (NSString *)stringFromDate:(NSDate *)date;
+- (NSArray *)datesInWeek:(NSInteger)weekNumber;
+- (NSString *)stringFromDate:(NSDate *)date;
+- (NSArray *)fetchDietPlanForDates:(NSArray *)dates;
 
 @end

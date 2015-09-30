@@ -19,6 +19,16 @@
 #import "UIImageEffects.h"
 #import "UIColor+Hex.h"
 #import <Masonry/Masonry.h>
+#import <SWTableViewCell/SWTableViewCell.h>
+#import <M13OrderedDictionary/M13OrderedDictionary.h>
+#import <AFNetworking/AFNetworking.h>
+#import <AFNetworking/UIImageView+AFNetworking.h>
+
+#import "FITProductEntity.h"
+#import "FITDishEntity.h"
+#import "FITDayEntity.h"
+
+#import "Parse/PFObject+Subclass.h"
 
 // Include any system framework and library headers here that should be included in all compilation units.
 // You will also need to set the Prefix Header build setting of one or more of your targets to reference this file.

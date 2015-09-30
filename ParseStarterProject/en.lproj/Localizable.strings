@@ -1,0 +1,79 @@
+/* 
+  Localizable.strings
+  Fitsei
+
+  Created by Konrad Roj on 27.09.2015.
+  Copyright © 2015 Konrad Roj. All rights reserved.
+*/
+
+"Today" = "Today";
+
+"Breakfast" = "Breakfast";
+
+"Second breakfast" = "Second breakfast";
+
+"Lunch" = "Lunch";
+
+"Snack" = "Snack";
+
+"Dinner" = "Dinner";
+
+"Supper" = "Supper";
+
+"Diet plan" = "Diet plan";
+
+"Settings" = "Settings";
+
+"Shopping list" = "Shopping list";
+
+"Notifications" = "Notifications";
+
+"ON" = "ON";
+
+"OFF" = "OFF";
+
+"DAY" = "DAY";
+
+"WEEK" = "WEEK";
+
+"Need for tommorow" = "Need for tommorow";
+
+"Copyright © 2015 Konrad Roj. All rights reserved." = "Copyright © 2015 Konrad Roj. All rights reserved.";
+
+"Preparation" = "Preparation";
+
+"Products" = "Products";
+
+"Carbohydrate" = "Carbohydrate";
+
+"Protein" = "Protein";
+
+"Fat" = "Fat";
+
+"This week" = "This week";
+
+"Next week" = "Next week";
+
+"Selection" = "Selection";
+
+"Empty" = "Empty";
+
+"Meat" = "Meat";
+
+"Fish" = "Fish";
+
+"Vege" = "Vege";
+
+"ADD" = "ADD";
+
+"DETAIL" = "DETAIL";
+
+"REMOVE" = "REMOVE";
+
+"EDIT" = "EDIT";
+
+"PLAN YOUR DIET" = "PLAN YOUR DIET";
+
+"CHOOSE STANDARD PLAN" = "CHOOSE STANDARD PLAN";
+
+"Not hungry?" = "Not hungry?";

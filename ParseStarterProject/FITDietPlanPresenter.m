@@ -10,7 +10,32 @@
 
 @implementation FITDietPlanPresenter
 
-+ (NSArray *)datesInWeek:(NSInteger)weekNumber {
+- (NSArray *)fetchDietPlanForDates:(NSArray *)dates {
+    PFQuery *query = [PFQuery queryWithClassName:@"Day"];
+    [query fromLocalDatastore];
+    
+    NSMutableArray *dayList = [NSMutableArray new];
+    
+    for (NSDate *date in dates) {
+        [query whereKey:@"date" equalTo:[self stringFromDate:date]];
+        
+        FITDayEntity *day = [query findObjects].firstObject;
+        
+        if (!day) {
+            day = [FITDayEntity new];
+        }
+        
+        day.date = [self stringFromDate:date];
+        
+        [dayList addObject:day];
+    }
+    
+    [PFObject pinAllInBackground:dayList];
+    
+    return [NSArray arrayWithArray:dayList];
+}
+
+- (NSArray *)datesInWeek:(NSInteger)weekNumber {
     NSCalendar *greg = [[NSCalendar alloc] initWithCalendarIdentifier:NSCalendarIdentifierGregorian];
     greg.firstWeekday = 2;
     NSDateComponents *comps = [[NSDateComponents alloc] init];
@@ -37,9 +62,9 @@
     return [NSArray arrayWithArray:result];
 }
 
-+ (NSString *)stringFromDate:(NSDate *)date {
+- (NSString *)stringFromDate:(NSDate *)date {
     NSDateFormatter *formatter = [[NSDateFormatter alloc] init];
-    [formatter setDateFormat:@"EEEE, dd MMMM"];
+    [formatter setDateFormat:@"EEEE, d MMMM"];
     
     [formatter setTimeZone:[NSTimeZone systemTimeZone]];
     

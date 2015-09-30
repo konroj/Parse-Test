@@ -25,26 +25,27 @@
     self.leftViewController = [self.storyboard instantiateViewControllerWithIdentifier:@"LeftMenuViewController"];
     self.rightViewController = [self.storyboard instantiateViewControllerWithIdentifier:@"RightMenuViewController"];
     
+    self.rightViewSwipeGestureEnabled = NO;
 
     [self setLeftViewEnabledWithWidth:250.f
                     presentationStyle:LGSideMenuPresentationStyleScaleFromBig
                  alwaysVisibleOptions:0];
     
-    self.leftViewBackgroundImage = [UIImageEffects imageByApplyingTintEffectWithColor:[UIColor colorWithHex:@"#2980b9"] toImage:[UIImage imageNamed:@"background_blue"]];
+    self.leftViewBackgroundImage = [UIImage imageNamed:@"background_dark"];
 
     [self setRightViewEnabledWithWidth:100.f
                      presentationStyle:LGSideMenuPresentationStyleScaleFromBig
                   alwaysVisibleOptions:0];
     
-    self.rightViewBackgroundImage = [UIImageEffects imageByApplyingDarkEffectToImage:[UIImage imageNamed:@"left"]];
+    self.rightViewBackgroundImage = [UIImage imageNamed:@"background_dark"];
     
-    [_leftViewController.tableView reloadData];
-    [self.leftView addSubview:_leftViewController.tableView];
+    [self.leftViewController.tableView reloadData];
+    [self.leftView addSubview:self.leftViewController.tableView];
 
-    _rightViewController.tableView.backgroundColor = [UIColor clearColor];
-    _rightViewController.tintColor = [UIColor clearColor];
-    [_rightViewController.tableView reloadData];
-    [self.rightView addSubview:_rightViewController.tableView];
+    self.rightViewController.tableView.backgroundColor = [UIColor clearColor];
+    self.rightViewController.tintColor = [UIColor clearColor];
+    [self.rightViewController.tableView reloadData];
+    [self.rightView addSubview:self.rightViewController.tableView];
 }
 
 - (void)leftViewWillLayoutSubviewsWithSize:(CGSize)size {

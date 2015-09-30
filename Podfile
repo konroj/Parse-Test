@@ -6,6 +6,9 @@ target 'Fitsei' do
 pod 'Parse'
 pod 'LGSideMenuController'
 pod 'Masonry'
+pod 'SWTableViewCell'
+pod 'M13OrderedDictionary'
+pod 'AFNetworking'
 
 end
 

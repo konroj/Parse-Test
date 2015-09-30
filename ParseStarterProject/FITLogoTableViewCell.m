@@ -12,6 +12,7 @@
 
 - (void)awakeFromNib {
     self.backgroundColor = [UIColor clearColor];
+    self.layer.masksToBounds = NO;
 }
 
 - (void)setSelected:(BOOL)selected animated:(BOOL)animated {

@@ -12,5 +12,6 @@
 
 - (void)addNavigationBarRight;
 - (void)addNavigationBarLeft;
+- (void)addTwoBarRight;
 
 @end

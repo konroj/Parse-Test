@@ -1,0 +1,79 @@
+/* 
+  Localizable.strings
+  Fitsei
+
+  Created by Konrad Roj on 27.09.2015.
+  Copyright © 2015 Konrad Roj. All rights reserved.
+*/
+
+"Today" = "Dzisiaj";
+
+"Breakfast" = "Śniadanie";
+
+"Lunch" = "Obiad";
+
+"Second breakfast" = "Drugie śniadanie";
+
+"Snack" = "Przekąska";
+
+"Dinner" = "Kolacja";
+
+"Supper" = "Kolacja";
+
+"Diet plan" = "Plan diety";
+
+"Settings" = "Ustawienia";
+
+"Shopping list" = "Lista zakupów";
+
+"Notifications" = "Powiadomienia";
+
+"ON" = "WŁ.";
+
+"OFF" = "WYŁ.";
+
+"DAY" = "DZIEŃ";
+
+"WEEK" = "TYDZIEŃ";
+
+"Need for tommorow" = "Potrzeba na jutro";
+
+"Copyright © 2015 Konrad Roj. All rights reserved." = "Copyright © 2015 Konrad Roj. Wszelkie prawa zastrzeżone";
+
+"Preparation" = "Przygotowanie";
+
+"Products" = "Produkty";
+
+"Carbohydrate" = "Węglowodany";
+
+"Protein" = "Białko";
+
+"Fat" = "Tłuszcze";
+
+"This week" = "Ten tydzień";
+
+"Next week" = "Następny tydzień";
+
+"Selection" = "Wybór";
+
+"Empty" = "Puste";
+
+"Meat" = "Mięso";
+
+"Fish" = "Ryby";
+
+"Vege" = "Vege";
+
+"ADD" = "WYBIERZ";
+
+"DETAIL" = "SZCZEGÓŁY";
+
+"REMOVE" = "USUŃ";
+
+"EDIT" = "EDYTUJ";
+
+"PLAN YOUR DIET" = "ZAPLANUJ SWOJĄ DIETĘ";
+
+"CHOOSE STANDARD PLAN" = "WYBIERZ PLAN STANDARDOWY";
+
+"Not hungry?" = "Głodny?";

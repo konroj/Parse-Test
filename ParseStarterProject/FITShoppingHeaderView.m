@@ -11,7 +11,16 @@
 @implementation FITShoppingHeaderView
 
 - (void)initialize {
-
+    self.textLabel = [UILabel new];
+    self.textLabel.font = [UIFont systemFontOfSize:12.0f weight:UIFontWeightUltraLight];
+    self.textLabel.textColor = [UIColor whiteColor];
+    self.textLabel.text = NSLocalizedString(@"Need for tommorow", nil);
+    [self addSubview:self.textLabel];
+    
+    [self.textLabel mas_makeConstraints:^(MASConstraintMaker *make) {
+        make.centerX.equalTo(self);
+        make.centerY.equalTo(self);
+    }];
 }
 
 - (id)initWithCoder:(NSCoder *)aCoder{

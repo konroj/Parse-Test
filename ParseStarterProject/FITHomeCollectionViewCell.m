@@ -22,7 +22,15 @@
     self.middleDot.tintColor = [UIColor colorWithHex:@"#2980b9"];
     
     self.rightDot.image = dotImage;
-    self.rightDot.tintColor = [UIColor colorWithHex:@"#16a085"];
+    self.rightDot.tintColor = [UIColor colorWithHex:@"#f39c12"];
+}
+
+- (void)setSelected:(BOOL)selected {
+    if (selected) {
+        self.cardView.backgroundColor = [UIColor lightGrayColor];
+    } else {
+        self.cardView.backgroundColor = [UIColor whiteColor];
+    }
 }
 
 @end
