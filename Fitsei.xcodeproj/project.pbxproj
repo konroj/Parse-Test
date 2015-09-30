@@ -61,12 +61,12 @@
 		7996810D1BB880B30043D34C /* FITBigDishSelectionFlowLayout.m in Sources */ = {isa = PBXBuildFile; fileRef = 7996810C1BB880B30043D34C /* FITBigDishSelectionFlowLayout.m */; settings = {ASSET_TAGS = (); }; };
 		79AAA7251BB7F6750010ED38 /* Localizable.strings in Resources */ = {isa = PBXBuildFile; fileRef = 79AAA7271BB7F6750010ED38 /* Localizable.strings */; };
 		79AAA72B1BB80DAA0010ED38 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 79AAA72D1BB80DAA0010ED38 /* LaunchScreen.storyboard */; };
-		79AAA7361BB8198B0010ED38 /* FITDishEntity.m in Sources */ = {isa = PBXBuildFile; fileRef = 79AAA7351BB8198B0010ED38 /* FITDishEntity.m */; settings = {ASSET_TAGS = (); }; };
-		79AAA73C1BB82DC50010ED38 /* FITProductEntity.m in Sources */ = {isa = PBXBuildFile; fileRef = 79AAA73B1BB82DC50010ED38 /* FITProductEntity.m */; settings = {ASSET_TAGS = (); }; };
+		79AAA7361BB8198B0010ED38 /* FITDishEntity.m in Sources */ = {isa = PBXBuildFile; fileRef = 79AAA7351BB8198B0010ED38 /* FITDishEntity.m */; settings = {ASSET_TAGS = (); COMPILER_FLAGS = "-w"; }; };
+		79AAA73C1BB82DC50010ED38 /* FITProductEntity.m in Sources */ = {isa = PBXBuildFile; fileRef = 79AAA73B1BB82DC50010ED38 /* FITProductEntity.m */; settings = {ASSET_TAGS = (); COMPILER_FLAGS = "-w"; }; };
 		79AAA7471BB841550010ED38 /* FITHomePresenter.m in Sources */ = {isa = PBXBuildFile; fileRef = 79AAA7461BB841550010ED38 /* FITHomePresenter.m */; settings = {ASSET_TAGS = (); }; };
 		79AAA74E1BB844510010ED38 /* FITNewDishViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 79AAA74D1BB844510010ED38 /* FITNewDishViewController.m */; settings = {ASSET_TAGS = (); }; };
 		79AAA7521BB8473E0010ED38 /* FITNewDishTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 79AAA7511BB8473E0010ED38 /* FITNewDishTableViewCell.m */; settings = {ASSET_TAGS = (); }; };
-		79AAA7551BB85DDA0010ED38 /* FITDayEntity.m in Sources */ = {isa = PBXBuildFile; fileRef = 79AAA7541BB85DDA0010ED38 /* FITDayEntity.m */; settings = {ASSET_TAGS = (); }; };
+		79AAA7551BB85DDA0010ED38 /* FITDayEntity.m in Sources */ = {isa = PBXBuildFile; fileRef = 79AAA7541BB85DDA0010ED38 /* FITDayEntity.m */; settings = {ASSET_TAGS = (); COMPILER_FLAGS = "-w"; }; };
 		814C3AC01B69864600E307BB /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 814C3AB51B69864600E307BB /* InfoPlist.strings */; };
 		81A6CA611A2EA82800297C39 /* libstdc++.6.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = 81A6CA601A2EA82800297C39 /* libstdc++.6.dylib */; };
 		81AFA6791B0EDD12000763C0 /* libsqlite3.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = 6332375315E438E900AE2736 /* libsqlite3.dylib */; };

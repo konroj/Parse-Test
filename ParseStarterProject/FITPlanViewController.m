@@ -184,7 +184,7 @@
 
 - (NSInteger)currentDayIndex {
     NSUInteger weekday = [[NSCalendar currentCalendar] ordinalityOfUnit:NSCalendarUnitWeekday inUnit:NSCalendarUnitWeekOfYear forDate:[NSDate date]];
-    return weekday - 2;
+    return weekday - 1;
 }
 
 - (void)reloadPlanView {

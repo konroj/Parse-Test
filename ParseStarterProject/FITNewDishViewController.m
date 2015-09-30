@@ -94,7 +94,7 @@
                 break;
         }
     } else {
-        cell.titleLabel.text = [NSString stringWithFormat:@"Produkt %ld", indexPath.row - 10];
+        cell.titleLabel.text = [NSString stringWithFormat:@"Produkt %d", indexPath.row - 10];
     }
     
     return cell;
