@@ -26,6 +26,8 @@
 
 "Shopping list" = "Lista zakupów";
 
+"SHOPPING LIST" = "LISTA ZAKUPÓW";
+
 "Notifications" = "Powiadomienia";
 
 "ON" = "WŁ.";
@@ -76,8 +78,14 @@
 
 "CHOOSE STANDARD PLAN" = "WYBIERZ PLAN STANDARDOWY";
 
-"Not hungry?" = "Głodny?";
+"Hungry?" = "Głodny?";
 
 "Calculating..." = "Obliczam...";
 
 "Heating proteins..." = "Podgrzewanie białek...";
+
+"CHANGE YOUR PLAN" = "ZMIEŃ PLAN";
+
+"Ready for tommorow?" = "Wszystko gotowe?";
+
+"We present a shopping list for tomorrow or next week. The range can be changed in the settings." = "Prezentujemy listy zakupów na jutro lub przyszły tydzień. Zakres może zostać zmieniony w ustawieniach.";

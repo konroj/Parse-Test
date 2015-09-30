@@ -10,11 +10,28 @@
 
 @implementation FITHomePresenter
 
+- (NSArray *)fetchDiet {
+    return @[[self fetchTodayDiet], [self fetchTommorowDiet]];
+}
+
 - (FITDayEntity *)fetchTodayDiet {
     PFQuery *query = [PFQuery queryWithClassName:@"Day"];
     [query fromLocalDatastore];
     
     [query whereKey:@"date" equalTo:[self stringFromDate:[NSDate date]]];
+    
+    return [query findObjects].firstObject;
+}
+
+- (FITDayEntity *)fetchTommorowDiet {
+    NSDateComponents *deltaComps = [NSDateComponents new];
+    [deltaComps setDay:1];
+    NSDate *tomorrow = [[NSCalendar currentCalendar] dateByAddingComponents:deltaComps toDate:[NSDate date] options:0];
+    
+    PFQuery *query = [PFQuery queryWithClassName:@"Day"];
+    [query fromLocalDatastore];
+    
+    [query whereKey:@"date" equalTo:[self stringFromDate:tomorrow]];
     
     return [query findObjects].firstObject;
 }

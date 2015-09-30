@@ -28,5 +28,6 @@ static NSString * _Nonnull FromHomeToProductDetailSegue = @"FromHomeToProductDet
 static NSString * _Nonnull FromPlanToDishSelectionSegue = @"FromPlanToDishSelectionSegue";
 static NSString * _Nonnull FromDishSelectionToProductDetailSegue = @"FromDishSelectionToProductDetailSegue";
 static NSString * _Nonnull FromHomeToPlanSegue = @"FromHomeToPlanSegue";
+static NSString * _Nonnull FromHomeToShopListSegue = @"FromHomeToShopListSegue";
 
 #endif /* Consts_h */

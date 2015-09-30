@@ -10,6 +10,7 @@
 #import "FITShoppingProductTableViewCell.h"
 #import "FITShoppingHeaderView.h"
 #import "FITShoppingListPresenter.h"
+#import "FITShoppingEmptyTableViewCell.h"
 
 @interface FITShoppingViewController() <UITableViewDataSource, UITableViewDelegate, SWTableViewCellDelegate>
 @property (weak, nonatomic) IBOutlet UITableView *tableView;
@@ -17,6 +18,7 @@
 @property (strong, nonatomic) M13MutableOrderedDictionary *filteredDictionary;
 
 @property (strong, nonatomic) FITShoppingListPresenter *presenter;
+@property (assign, nonatomic) BOOL isLoading;
 @end
 
 @implementation FITShoppingViewController
@@ -34,6 +36,7 @@
     
     self.presenter = [FITShoppingListPresenter new];
     
+    self.isLoading = YES;
     [SVProgressHUD showWithStatus:NSLocalizedString(@"Heating proteins...", nil) maskType:SVProgressHUDMaskTypeGradient];
     __weak __typeof__(self) weakSelf = self;
     dispatch_async(dispatch_get_global_queue(DISPATCH_QUEUE_PRIORITY_DEFAULT, 0), ^{
@@ -41,6 +44,7 @@
         weakSelf.filteredDictionary = [M13MutableOrderedDictionary orderedDictionaryWithOrderedDictionary:self.productsDictionary];
         dispatch_async(dispatch_get_main_queue(), ^{
             [SVProgressHUD dismiss];
+            self.isLoading = NO;
             [weakSelf.tableView reloadData];
         });
     });
@@ -53,14 +57,22 @@
 }
 
 - (NSInteger)numberOfSectionsInTableView:(UITableView *)tableView {
+    if (self.isLoading) {
+        return 0;
+    }
     return 1;
 }
 
 - (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section {
-    return self.filteredDictionary.allKeys.count;
+    return self.filteredDictionary.allKeys.count ?: 1;
 }
 
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath {
+    if (!self.filteredDictionary.allKeys.count && !self.isLoading) {
+        FITShoppingEmptyTableViewCell *emptyCell = [tableView dequeueReusableCellWithIdentifier:@"ShoppingEmptyCell" forIndexPath:indexPath];
+        return emptyCell;
+    }
+    
     FITShoppingProductTableViewCell *productCell = [tableView dequeueReusableCellWithIdentifier:@"ShoppingProductCell" forIndexPath:indexPath];
     productCell.rightUtilityButtons = [self rightButtons];
     productCell.delegate = self;
@@ -75,22 +87,35 @@
 }
 
 - (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath {
+    if (!self.filteredDictionary.allKeys.count && !self.isLoading) {
+        return;
+    }
+    
     [tableView deselectRowAtIndexPath:indexPath animated:YES];
     FITShoppingProductTableViewCell *cell = (FITShoppingProductTableViewCell *)[tableView cellForRowAtIndexPath:indexPath];
     [cell showRightUtilityButtonsAnimated:YES];
 }
 
 - (CGFloat)tableView:(UITableView *)tableView heightForRowAtIndexPath:(NSIndexPath *)indexPath {
+    if (!self.filteredDictionary.allKeys.count && !self.isLoading) {
+        return 280.0f;
+    }
     return 64.0f;
 }
 
 - (UIView *)tableView:(UITableView *)tableView viewForHeaderInSection:(NSInteger)section {
+    if (!self.filteredDictionary.allKeys.count && !self.isLoading) {
+        return [UIView new];
+    }
     FITShoppingHeaderView *view = [FITShoppingHeaderView new];
     view.backgroundColor = [UIColor colorWithHex:@"#2980b9"];
     return view;
 }
 
 - (CGFloat)tableView:(UITableView *)tableView heightForHeaderInSection:(NSInteger)section {
+    if (!self.filteredDictionary.allKeys.count && !self.isLoading) {
+        return CGFLOAT_MIN;
+    }
     return 18.0f;
 }
 

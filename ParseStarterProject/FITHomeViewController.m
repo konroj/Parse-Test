@@ -11,11 +11,12 @@
 #import "FITHomePresenter.h"
 #import "FITProductDetailViewController.h"
 #import "FITHomeEmptyCollectionViewCell.h"
+#import "FITHomeShopCollectionViewCell.h"
 
 static NSUInteger const ANIMATION_SPEED = 1.0f;
 #define TRANSFORM_CELL_VALUE CGAffineTransformMakeScale(0.8, 0.8)
 
-@interface FITHomeViewController () <UICollectionViewDataSource, UICollectionViewDelegate, HomeEmptyDelegate>
+@interface FITHomeViewController () <UICollectionViewDataSource, UICollectionViewDelegate, HomeEmptyDelegate, HomeShopDelegate>
 @property (weak, nonatomic) IBOutlet UILabel *kcalLabel;
 @property (weak, nonatomic) IBOutlet UILabel *todayLabel;
 @property (strong, nonatomic) IBOutlet UICollectionView *collectionView;
@@ -27,6 +28,7 @@ static NSUInteger const ANIMATION_SPEED = 1.0f;
 @property (strong, nonatomic) NSArray *dataList;
 
 @property (assign, nonatomic) BOOL dataLoaded;
+@property (assign, nonatomic) BOOL isDishTommorow;
 @end
 
 @implementation FITHomeViewController
@@ -62,7 +64,11 @@ static NSUInteger const ANIMATION_SPEED = 1.0f;
     [SVProgressHUD showWithStatus:NSLocalizedString(@"Heating proteins...", nil) maskType:SVProgressHUDMaskTypeGradient];
     __weak __typeof__(self) weakSelf = self;
     dispatch_async(dispatch_get_global_queue(DISPATCH_QUEUE_PRIORITY_DEFAULT, 0), ^{
-        self.dataList = [self dishArrayFromDayEntity:[self.presenter fetchTodayDiet]];
+        NSArray *arrayDiet = [self.presenter fetchDiet];
+
+        self.dataList = [self dishArrayFromDayEntity:arrayDiet[0]];
+        self.isDishTommorow = [self isDishInEntity:arrayDiet[1]];
+        
         for (FITDishEntity *dish in self.dataList) {
             if ([dish isDataAvailable]) {
                 [dish fetchFromLocalDatastore];
@@ -93,16 +99,24 @@ static NSUInteger const ANIMATION_SPEED = 1.0f;
 - (NSInteger)collectionView:(UICollectionView *)collectionView numberOfItemsInSection:(NSInteger)section {
     if (!self.dataLoaded) {
         return 0;
+    } else if (!self.dataList.count && self.isDishTommorow) {
+        return 1;
     }
+    
     return self.dataList.count ?: 1;
 }
 
 - (UICollectionViewCell *)collectionView:(UICollectionView *)collectionView cellForItemAtIndexPath:(NSIndexPath *)indexPath {
-    if (!self.dataList.count) {
+    if (!self.dataList.count && !self.isDishTommorow) {
         FITHomeEmptyCollectionViewCell *emptyCell = [collectionView dequeueReusableCellWithReuseIdentifier:@"HomeEmptyCell" forIndexPath:indexPath];
         emptyCell.delegate = self;
     
         return emptyCell;
+    } else if (!self.dataList.count && self.isDishTommorow) {
+        FITHomeShopCollectionViewCell *shopCell = [collectionView dequeueReusableCellWithReuseIdentifier:@"HomeShopCell" forIndexPath:indexPath];
+        shopCell.delegate = self;
+        
+        return shopCell;
     }
     
     FITHomeCollectionViewCell *cell = [collectionView dequeueReusableCellWithReuseIdentifier:@"HomeCell" forIndexPath:indexPath];
@@ -225,6 +239,16 @@ static NSUInteger const ANIMATION_SPEED = 1.0f;
     return [NSArray arrayWithArray:mutableArray];
 }
 
+- (BOOL)isDishInEntity:(FITDayEntity *)day {
+    BOOL isDish;
+    
+    if (day.breakfast || day.secondBreakfast || day.lunch || day.snack || day.dinner) {
+        isDish = YES;
+    }
+    
+    return isDish;
+}
+
 - (void)calculateTotalKcal {
     NSInteger count = 0;
     
@@ -240,6 +264,14 @@ static NSUInteger const ANIMATION_SPEED = 1.0f;
 }
 
 - (void)didSelectPlanButton:(FITHomeEmptyCollectionViewCell *)cell {
+    [self performSegueWithIdentifier:FromHomeToPlanSegue sender:nil];
+}
+
+- (void)didSelectShopListButton:(FITHomeShopCollectionViewCell *)cell {
+    [self performSegueWithIdentifier:FromHomeToShopListSegue sender:nil];
+}
+
+- (void)didSelectChangePlanButton:(FITHomeShopCollectionViewCell *)cell {
     [self performSegueWithIdentifier:FromHomeToPlanSegue sender:nil];
 }
 

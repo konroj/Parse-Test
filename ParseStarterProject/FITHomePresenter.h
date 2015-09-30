@@ -10,7 +10,9 @@
 
 @interface FITHomePresenter : NSObject
 
+- (NSArray *)fetchDiet;
 - (FITDayEntity *)fetchTodayDiet;
+- (FITDayEntity *)fetchTommorowDiet;
 
 - (void)addRandomObject;
 

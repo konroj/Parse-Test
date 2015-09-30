@@ -11,7 +11,7 @@
 @implementation FITHomeEmptyCollectionViewCell
 
 - (void)awakeFromNib {
-    self.topLabel.text = NSLocalizedString(@"Not hungry?", nil);
+    self.topLabel.text = NSLocalizedString(@"Hungry?", nil);
     self.planLabel.text = NSLocalizedString(@"PLAN YOUR DIET", nil);
     self.chooseLabel.text = NSLocalizedString(@"CHOOSE STANDARD PLAN", nil);
     

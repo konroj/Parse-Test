@@ -67,6 +67,8 @@
 		79AAA74E1BB844510010ED38 /* FITNewDishViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 79AAA74D1BB844510010ED38 /* FITNewDishViewController.m */; settings = {ASSET_TAGS = (); }; };
 		79AAA7521BB8473E0010ED38 /* FITNewDishTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 79AAA7511BB8473E0010ED38 /* FITNewDishTableViewCell.m */; settings = {ASSET_TAGS = (); }; };
 		79AAA7551BB85DDA0010ED38 /* FITDayEntity.m in Sources */ = {isa = PBXBuildFile; fileRef = 79AAA7541BB85DDA0010ED38 /* FITDayEntity.m */; settings = {ASSET_TAGS = (); COMPILER_FLAGS = "-w"; }; };
+		79CAEA761BBC410800C4FD46 /* FITHomeShopCollectionViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 79CAEA751BBC410800C4FD46 /* FITHomeShopCollectionViewCell.m */; settings = {ASSET_TAGS = (); }; };
+		79CAEA791BBC599E00C4FD46 /* FITShoppingEmptyTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 79CAEA781BBC599E00C4FD46 /* FITShoppingEmptyTableViewCell.m */; settings = {ASSET_TAGS = (); }; };
 		814C3AC01B69864600E307BB /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 814C3AB51B69864600E307BB /* InfoPlist.strings */; };
 		81A6CA611A2EA82800297C39 /* libstdc++.6.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = 81A6CA601A2EA82800297C39 /* libstdc++.6.dylib */; };
 		81AFA6791B0EDD12000763C0 /* libsqlite3.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = 6332375315E438E900AE2736 /* libsqlite3.dylib */; };
@@ -189,6 +191,10 @@
 		79AAA7511BB8473E0010ED38 /* FITNewDishTableViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FITNewDishTableViewCell.m; sourceTree = "<group>"; };
 		79AAA7531BB85DDA0010ED38 /* FITDayEntity.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FITDayEntity.h; sourceTree = "<group>"; };
 		79AAA7541BB85DDA0010ED38 /* FITDayEntity.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FITDayEntity.m; sourceTree = "<group>"; };
+		79CAEA741BBC410800C4FD46 /* FITHomeShopCollectionViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FITHomeShopCollectionViewCell.h; sourceTree = "<group>"; };
+		79CAEA751BBC410800C4FD46 /* FITHomeShopCollectionViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FITHomeShopCollectionViewCell.m; sourceTree = "<group>"; };
+		79CAEA771BBC599E00C4FD46 /* FITShoppingEmptyTableViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FITShoppingEmptyTableViewCell.h; sourceTree = "<group>"; };
+		79CAEA781BBC599E00C4FD46 /* FITShoppingEmptyTableViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FITShoppingEmptyTableViewCell.m; sourceTree = "<group>"; };
 		814C3AB61B69864600E307BB /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
 		814C3ABC1B69864600E307BB /* Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		81A6CA601A2EA82800297C39 /* libstdc++.6.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; name = "libstdc++.6.dylib"; path = "usr/lib/libstdc++.6.dylib"; sourceTree = SDKROOT; };
@@ -378,6 +384,8 @@
 				797ED7F91BB5E663004420AC /* FITHomeFlowLayout.m */,
 				79810D641BBA699900A5D5C0 /* FITHomeEmptyCollectionViewCell.h */,
 				79810D651BBA699900A5D5C0 /* FITHomeEmptyCollectionViewCell.m */,
+				79CAEA741BBC410800C4FD46 /* FITHomeShopCollectionViewCell.h */,
+				79CAEA751BBC410800C4FD46 /* FITHomeShopCollectionViewCell.m */,
 			);
 			name = Cell;
 			sourceTree = "<group>";
@@ -409,6 +417,8 @@
 				797ED8141BB650A4004420AC /* FITShoppingProductTableViewCell.m */,
 				797ED8161BB653D7004420AC /* FITShoppingHeaderView.h */,
 				797ED8171BB653D7004420AC /* FITShoppingHeaderView.m */,
+				79CAEA771BBC599E00C4FD46 /* FITShoppingEmptyTableViewCell.h */,
+				79CAEA781BBC599E00C4FD46 /* FITShoppingEmptyTableViewCell.m */,
 			);
 			name = Cell;
 			sourceTree = "<group>";
@@ -728,6 +738,7 @@
 				797ED8201BB69A7E004420AC /* FITSettingsViewController.m in Sources */,
 				797ED82F1BB6BA35004420AC /* FITProductDetailTableViewCell.m in Sources */,
 				79810D631BB9D0D300A5D5C0 /* FITShoppingListPresenter.m in Sources */,
+				79CAEA791BBC599E00C4FD46 /* FITShoppingEmptyTableViewCell.m in Sources */,
 				797ED7F61BB5BFC8004420AC /* FITHomeCollectionViewCell.m in Sources */,
 				797ED80A1BB61BB4004420AC /* FITSmallPlanCollectionViewCell.m in Sources */,
 				241141AD1BB55A0E0039591B /* FITDrawerViewController.m in Sources */,
@@ -738,6 +749,7 @@
 				797ED80D1BB6232C004420AC /* FITBigPlanFlowLayout.m in Sources */,
 				797ED8321BB6C930004420AC /* FITProductTitleTableViewCell.m in Sources */,
 				79810D601BB94DF100A5D5C0 /* FITSmallDishSelectionCollectionViewCell.m in Sources */,
+				79CAEA761BBC410800C4FD46 /* FITHomeShopCollectionViewCell.m in Sources */,
 				797ED8351BB6C960004420AC /* FITProductInfoTableViewCell.m in Sources */,
 				797ED8381BB6CD3D004420AC /* FITProductLongTextTableViewCell.m in Sources */,
 				24DF63E11BB5607600A1B62F /* FITRightMenuTableViewCell.m in Sources */,
