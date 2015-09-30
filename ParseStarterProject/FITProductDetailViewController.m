@@ -32,6 +32,21 @@
     self.tableView.backgroundColor = [UIColor clearColor];
     
     [((FITNavigationViewController *)self.navigationController) animateNavigationBarTintToColor:[UIColor blackColor] duration:0.4f];
+    
+    __weak __typeof__(self) weakSelf = self;
+    dispatch_async(dispatch_get_global_queue(DISPATCH_QUEUE_PRIORITY_DEFAULT, 0), ^{
+        for (FITProductEntity *product in self.dishEntity.products) {
+            if ([product isDataAvailable]) {
+                [product fetchFromLocalDatastore];
+            } else {
+                [product fetchIfNeeded];
+                [product pinInBackground];
+            }
+        }
+    dispatch_async(dispatch_get_main_queue(), ^{
+            [weakSelf.tableView reloadData];
+        });
+    });
 }
 
 - (void)viewWillDisappear:(BOOL)animated {
@@ -71,13 +86,6 @@
         FITProductInfoTableViewCell *infoCell = [tableView dequeueReusableCellWithIdentifier:@"ProductInfoCell" forIndexPath:indexPath];
         
         FITProductEntity *product = self.dishEntity.products[indexPath.row - 3];
-        if ([product isDataAvailable]) {
-            [product fetchFromLocalDatastore];
-        } else {
-            [product fetchIfNeeded];
-            [product pinInBackground];
-        }
-        
         infoCell.productLabel.text = [product localizedName];
         infoCell.sizeLabel.text = [NSString stringWithFormat:@"%@%@", product.size, [product localizedSuffix]];
         

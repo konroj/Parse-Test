@@ -25,6 +25,8 @@ static NSUInteger const ANIMATION_SPEED = 1.0f;
 
 @property (strong, nonatomic) FITHomePresenter *presenter;
 @property (strong, nonatomic) NSArray *dataList;
+
+@property (assign, nonatomic) BOOL dataLoaded;
 @end
 
 @implementation FITHomeViewController
@@ -54,13 +56,29 @@ static NSUInteger const ANIMATION_SPEED = 1.0f;
 - (void)viewWillAppear:(BOOL)animated {
     [super viewWillAppear:animated];
     
-    self.dataList = [self dishArrayFromDayEntity:[self.presenter fetchTodayDiet]];
-    [self.collectionView reloadData];
+    self.dataLoaded = NO;
+    self.kcalLabel.text = NSLocalizedString(@"Calculating...", nil);
+    
+    __weak __typeof__(self) weakSelf = self;
+    dispatch_async(dispatch_get_global_queue(DISPATCH_QUEUE_PRIORITY_DEFAULT, 0), ^{
+        self.dataList = [self dishArrayFromDayEntity:[self.presenter fetchTodayDiet]];
+        for (FITDishEntity *dish in self.dataList) {
+            if ([dish isDataAvailable]) {
+                [dish fetchFromLocalDatastore];
+            } else {
+                [dish fetchIfNeeded];
+                [dish pinInBackground];
+            }
+        }
+        dispatch_async(dispatch_get_main_queue(), ^{
+            [self calculateTotalKcal];
+            self.dataLoaded = YES;
+            [weakSelf.collectionView reloadData];
+        });
+    });
 }
 
 - (void)viewDidAppear:(BOOL)animated {
-    [self calculateTotalKcal];
-    
     CGPoint p = CGPointMake(1, 1);
     struct CGPoint *pAqData = &p;
     [self scrollViewWillEndDragging:self.collectionView withVelocity:CGPointMake(1, 1) targetContentOffset:pAqData];
@@ -71,6 +89,9 @@ static NSUInteger const ANIMATION_SPEED = 1.0f;
 }
 
 - (NSInteger)collectionView:(UICollectionView *)collectionView numberOfItemsInSection:(NSInteger)section {
+    if (!self.dataLoaded && self.dataList.count) {
+        return 0;
+    }
     return self.dataList.count ?: 1;
 }
 
@@ -85,12 +106,6 @@ static NSUInteger const ANIMATION_SPEED = 1.0f;
     FITHomeCollectionViewCell *cell = [collectionView dequeueReusableCellWithReuseIdentifier:@"HomeCell" forIndexPath:indexPath];
     
     FITDishEntity *dish = self.dataList[indexPath.row];
-    if ([dish isDataAvailable]) {
-        [dish fetchFromLocalDatastore];
-    } else {
-        [dish fetchIfNeeded];
-        [dish pinInBackground];
-    }
     
     cell.topLabel.text = NSLocalizedString(dish.dishType, nil);
     cell.kcalLabel.text = [NSString stringWithFormat:@"%@ kCal", dish.kcal];

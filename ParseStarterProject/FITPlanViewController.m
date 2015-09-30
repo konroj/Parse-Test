@@ -21,6 +21,7 @@
 @property (weak, nonatomic) IBOutlet UIImageView *background;
 @property (assign, nonatomic) NSInteger currentPage;
 @property (assign, nonatomic) BOOL colorSet;
+@property (assign, nonatomic) BOOL firstLayoutSubviewsCalled;
 @property (strong, nonatomic) FITDietPlanPresenter *presenter;
 @end
 
@@ -54,18 +55,13 @@
 - (void)viewDidLayoutSubviews {
     [super viewDidLayoutSubviews];
     
-    if (self.dates.count) {
+    if (self.dates.count && ! self.firstLayoutSubviewsCalled) {
+        self.firstLayoutSubviewsCalled = YES;
         NSIndexPath *indexPath = [NSIndexPath indexPathForItem:[self currentDayIndex] inSection:0];
         
         CGPoint proposedOffset = CGPointMake(0, 0);
         proposedOffset.y = indexPath.item * (250.0f + 10.0f);
-        [self.collectionView setContentOffset:proposedOffset animated:YES];
-        
-        if (indexPath.item > 0) {
-            self.topConstraint.constant = 0.0f;
-        } else {
-            self.topConstraint.constant = -64.0f;
-        }
+        [self.collectionView setContentOffset:proposedOffset animated:NO];
     }
 }
 
@@ -110,7 +106,7 @@
     return CGSizeMake(self.collectionView.frame.size.width, 250.0f);
 }
 
-- (UIEdgeInsets)collectionView:(UICollectionView *)collectionView layout:(UICollectionViewLayout *)collectionViewLayout insetForSectionAtIndex:(NSInteger)section{
+- (UIEdgeInsets)collectionView:(UICollectionView *)collectionView layout:(UICollectionViewLayout *)collectionViewLayout insetForSectionAtIndex:(NSInteger)section {
     return UIEdgeInsetsMake(6.0f, 0.0f, 25.0f, 0.0f);
 }
 
@@ -131,16 +127,14 @@
     if (newTargetOffset == 0 || newTargetOffset < 0) {
         self.colorSet = NO;
         
-        [UIView animateWithDuration:0.2f animations:^{
-            self.topConstraint.constant = 0.0f;
+        [UIView animateWithDuration:0.6f animations:^{
             self.background.alpha = 1.0f;
         }];
         
     } else if (newTargetOffset >= 1 && !self.colorSet) {
         self.colorSet = YES;
         
-        [UIView animateWithDuration:0.2f animations:^{
-            self.topConstraint.constant = -64.0f;
+        [UIView animateWithDuration:0.6f animations:^{
             self.background.alpha = 0.0f;
         }];
     }
@@ -183,7 +177,9 @@
 }
 
 - (NSInteger)currentDayIndex {
-    NSUInteger weekday = [[NSCalendar currentCalendar] ordinalityOfUnit:NSCalendarUnitWeekday inUnit:NSCalendarUnitWeekOfYear forDate:[NSDate date]];
+    NSCalendar *gregorian = [[NSCalendar alloc] initWithCalendarIdentifier:NSCalendarIdentifierGregorian];
+    [gregorian setFirstWeekday:2];
+    NSUInteger weekday = [gregorian ordinalityOfUnit:NSCalendarUnitWeekday inUnit:NSCalendarUnitWeekOfYear forDate:[NSDate date]];
     return weekday - 1;
 }
 

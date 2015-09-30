@@ -17,7 +17,7 @@
 #import "FITProductDetailViewController.h"
 #import "FITPlanViewController.h"
 
-@interface FITDishSelectionViewController () <UICollectionViewDataSource, UICollectionViewDelegate, LeftMenuDelegate, FITBigDishSelectionDelegate>
+@interface FITDishSelectionViewController () <UICollectionViewDataSource, UICollectionViewDelegate, FITBigDishSelectionDelegate>
 @property (weak, nonatomic) IBOutlet NSLayoutConstraint *topConstraint;
 @property (weak, nonatomic) IBOutlet UICollectionView *collectionView;
 @property (weak, nonatomic) IBOutlet UIImageView *background;
@@ -32,8 +32,6 @@
 @implementation FITDishSelectionViewController
 
 - (void)awakeFromNib {
-    ((FITDrawerViewController *)FITMainViewController).leftViewController.delegate = self;
-    
     [self addNavigationBarRight];
 }
 
@@ -136,13 +134,11 @@
     if (newTargetOffset == 0 || newTargetOffset < 0) {
         [UIView animateWithDuration:0.2f animations:^{
             self.background.alpha = 1.0f;
-            self.topConstraint.constant = 0.0f;
         }];
         
     } else if (newTargetOffset >= 1 && !self.colorSet) {
         [UIView animateWithDuration:0.2f animations:^{
             self.background.alpha = 0.0f;
-            self.topConstraint.constant = -64.0f;
         }];
     }
     
