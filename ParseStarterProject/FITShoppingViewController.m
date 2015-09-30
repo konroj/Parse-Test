@@ -16,7 +16,6 @@
 @property (weak, nonatomic) IBOutlet UITableView *tableView;
 @property (strong, nonatomic) M13OrderedDictionary *productsDictionary;
 @property (strong, nonatomic) M13MutableOrderedDictionary *filteredDictionary;
-
 @property (strong, nonatomic) FITShoppingListPresenter *presenter;
 @property (assign, nonatomic) BOOL isLoading;
 @end
@@ -52,7 +51,6 @@
 
 - (void)viewWillAppear:(BOOL)animated {
     [super viewWillAppear:animated];
-    
     [self.tableView reloadData];
 }
 

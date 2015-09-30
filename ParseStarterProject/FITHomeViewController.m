@@ -64,12 +64,12 @@ static NSUInteger const ANIMATION_SPEED = 1.0f;
     [SVProgressHUD showWithStatus:NSLocalizedString(@"Heating proteins...", nil) maskType:SVProgressHUDMaskTypeGradient];
     __weak __typeof__(self) weakSelf = self;
     dispatch_async(dispatch_get_global_queue(DISPATCH_QUEUE_PRIORITY_DEFAULT, 0), ^{
-        NSArray *arrayDiet = [self.presenter fetchDiet];
+        NSArray *arrayDiet = [weakSelf.presenter fetchDiet];
 
-        self.dataList = [self dishArrayFromDayEntity:arrayDiet[0]];
-        self.isDishTommorow = [self isDishInEntity:arrayDiet[1]];
+        weakSelf.dataList = [weakSelf dishArrayFromDayEntity:arrayDiet[0]];
+        weakSelf.isDishTommorow = [weakSelf isDishInEntity:arrayDiet[1]];
         
-        for (FITDishEntity *dish in self.dataList) {
+        for (FITDishEntity *dish in weakSelf.dataList) {
             if ([dish isDataAvailable]) {
                 [dish fetchFromLocalDatastore];
             } else {
@@ -78,8 +78,8 @@ static NSUInteger const ANIMATION_SPEED = 1.0f;
             }
         }
         dispatch_async(dispatch_get_main_queue(), ^{
-            [self calculateTotalKcal];
-            self.dataLoaded = YES;
+            [weakSelf calculateTotalKcal];
+            weakSelf.dataLoaded = YES;
             [weakSelf.collectionView reloadData];
             [SVProgressHUD dismiss];
         });
@@ -140,6 +140,10 @@ static NSUInteger const ANIMATION_SPEED = 1.0f;
 }
 
 - (void)collectionView:(UICollectionView *)collectionView didSelectItemAtIndexPath:(NSIndexPath *)indexPath {
+    if (!self.dataLoaded || !self.dataList.count || self.isDishTommorow) {
+        return;
+    }
+    
     [collectionView deselectItemAtIndexPath:indexPath animated:YES];
     [self performSegueWithIdentifier:FromHomeToProductDetailSegue sender:self.dataList[indexPath.row]];
 }
@@ -240,7 +244,7 @@ static NSUInteger const ANIMATION_SPEED = 1.0f;
 }
 
 - (BOOL)isDishInEntity:(FITDayEntity *)day {
-    BOOL isDish;
+    BOOL isDish = NO;
     
     if (day.breakfast || day.secondBreakfast || day.lunch || day.snack || day.dinner) {
         isDish = YES;

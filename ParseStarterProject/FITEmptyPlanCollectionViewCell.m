@@ -11,7 +11,7 @@
 @implementation FITEmptyPlanCollectionViewCell
 
 - (void)awakeFromNib {
-    self.emptyLabel.text = NSLocalizedString(@"Empty", nil);
+    self.emptyLabel.text = NSLocalizedString(@"Tap to choose", nil);
 }
 
 - (void)textForIndex:(NSIndexPath *)indexPath {

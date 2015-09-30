@@ -20,6 +20,10 @@
 - (void)awakeFromNib {
     self.collectionView.delegate = self;
     self.collectionView.dataSource = self;
+    
+    UIImage *image = [[UIImage imageNamed:@"trash"] imageWithRenderingMode:UIImageRenderingModeAlwaysTemplate];
+    [self.deleteButton setImage:image forState:UIControlStateNormal];
+    self.deleteButton.tintColor = [UIColor blackColor];
 }
 
 - (NSInteger)numberOfSectionsInCollectionView:(UICollectionView *)collectionView {

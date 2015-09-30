@@ -18,6 +18,7 @@
 @end
 
 @interface FITBigPlanCollectionViewCell : UICollectionViewCell
+@property (weak, nonatomic) IBOutlet UIButton *deleteButton;
 @property (weak, nonatomic) IBOutlet UILabel *dayLabel;
 @property (weak, nonatomic) IBOutlet UICollectionView *collectionView;
 @property (weak, nonatomic) id<BigCollectionCellDelegate> delegate;
