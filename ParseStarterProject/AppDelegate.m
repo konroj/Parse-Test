@@ -64,12 +64,12 @@
     
     NSDate *date = [[NSUserDefaults standardUserDefaults] objectForKey:@"LastDataFetchDate"];
     if (date == nil || [self daysBetweenDates:date second:[NSDate date]] > 6) {
-        [[NSUserDefaults standardUserDefaults] setObject:[NSDate date] forKey:@"LastDataFetchDate"];
-        [[NSUserDefaults standardUserDefaults] synchronize];
-            
         PFQuery *query = [PFQuery queryWithClassName:@"Dish"];
         NSArray *objects = [query findObjects];
-        [PFObject pinAllInBackground:objects];
+        [PFObject pinAllInBackground:objects block:^(BOOL succeeded, NSError * _Nullable error) {
+            [[NSUserDefaults standardUserDefaults] setObject:[NSDate date] forKey:@"LastDataFetchDate"];
+            [[NSUserDefaults standardUserDefaults] synchronize];
+        }];
     }
 
     return YES;
