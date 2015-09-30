@@ -18,6 +18,7 @@
 #import "FITPlanViewController.h"
 
 @interface FITDishSelectionViewController () <UICollectionViewDataSource, UICollectionViewDelegate, LeftMenuDelegate, FITBigDishSelectionDelegate>
+@property (weak, nonatomic) IBOutlet NSLayoutConstraint *topConstraint;
 @property (weak, nonatomic) IBOutlet UICollectionView *collectionView;
 @property (weak, nonatomic) IBOutlet UIImageView *background;
 @property (assign, nonatomic) NSInteger currentPage;
@@ -45,22 +46,6 @@
     self.presenter = [FITSelectionPresenter new];
     
     self.dishesDictionary = [self.presenter fetchDishesWithIndex:self.index];
-}
-
-- (void)viewDidAppear:(BOOL)animated {
-    [super viewDidAppear:animated];
-    
-    NSArray *visibleCells = [self.collectionView visibleCells];
-    BOOL topVisible;
-    for (UICollectionViewCell *cell in visibleCells) {
-        if ([[self.collectionView indexPathForCell:cell] isEqual:[NSIndexPath indexPathForItem:0 inSection:0]]) {
-            topVisible = YES;
-        }
-    }
-    
-    if (!topVisible) {
-        [((FITNavigationViewController *)self.navigationController) animateNavigationBarFromColor:[UIColor clearColor] toColor:[UIColor colorWithHex:@"#d52291"] duration:0.4f];
-    }
 }
 
 - (NSInteger)numberOfSectionsInCollectionView:(UICollectionView *)collectionView {
@@ -126,11 +111,11 @@
     vc.dishEntity = sender;
 }
 
-- (CGSize)collectionView:(UICollectionView *)collectionView layout:(UICollectionViewLayout*)collectionViewLayout sizeForItemAtIndexPath:(NSIndexPath *)indexPath {
+- (CGSize)collectionView:(UICollectionView *)collectionView layout:(UICollectionViewLayout *)collectionViewLayout sizeForItemAtIndexPath:(NSIndexPath *)indexPath {
     return CGSizeMake(self.collectionView.frame.size.width, 250.0f);
 }
 
-- (UIEdgeInsets)collectionView:(UICollectionView *)collectionView layout:(UICollectionViewLayout*)collectionViewLayout insetForSectionAtIndex:(NSInteger)section{
+- (UIEdgeInsets)collectionView:(UICollectionView *)collectionView layout:(UICollectionViewLayout *)collectionViewLayout insetForSectionAtIndex:(NSInteger)section{
     return UIEdgeInsetsMake(70.0f, 0.0f, 25.0f, 0.0f);
 }
 
@@ -149,19 +134,15 @@
     }
     
     if (newTargetOffset == 0 || newTargetOffset < 0) {
-        [((FITNavigationViewController *)self.navigationController) animateNavigationBarFromColor:[UIColor colorWithHex:@"#d52291"] toColor:[UIColor clearColor] duration:0.4f];
-        self.colorSet = NO;
-        
         [UIView animateWithDuration:0.2f animations:^{
             self.background.alpha = 1.0f;
+            self.topConstraint.constant = 0.0f;
         }];
         
     } else if (newTargetOffset >= 1 && !self.colorSet) {
-        [((FITNavigationViewController *)self.navigationController) animateNavigationBarFromColor:[UIColor clearColor] toColor:[UIColor colorWithHex:@"#d52291"] duration:0.4f];
-        self.colorSet = YES;
-        
         [UIView animateWithDuration:0.2f animations:^{
             self.background.alpha = 0.0f;
+            self.topConstraint.constant = -64.0f;
         }];
     }
     
@@ -173,16 +154,6 @@
     
     targetContentOffset->y = currentOffset;
     [scrollView setContentOffset:CGPointMake(0, newTargetOffset) animated:YES];
-}
-
-- (void)willReplaceViewController {
-    [((FITNavigationViewController *)self.navigationController) animateNavigationBarFromColor:[UIColor colorWithHex:@"#d52291"] toColor:[UIColor clearColor] duration:0.2f];
-}
-
-- (void)viewWillDisappear:(BOOL)animated {
-    [((FITNavigationViewController *)self.navigationController) animateNavigationBarFromColor:[UIColor colorWithHex:@"#d52291"] toColor:[UIColor clearColor] duration:0.2f];
-    
-    [super viewWillDisappear:animated];
 }
 
 @end
