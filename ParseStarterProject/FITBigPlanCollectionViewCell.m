@@ -127,14 +127,39 @@
     [self.dayEntity pinInBackground];
 }
 
-- (CGSize)collectionView:(UICollectionView *)collectionView layout:(UICollectionViewLayout*)collectionViewLayout sizeForItemAtIndexPath:(NSIndexPath *)indexPath {
+- (IBAction)deleteDayAction:(id)sender {
+    UIAlertController *alertController = [UIAlertController alertControllerWithTitle:NSLocalizedString(@"Hey!", nil) message:NSLocalizedString(@"Are you sure you want to delete a plan for the day?", nil) preferredStyle:UIAlertControllerStyleAlert];
+    
+    UIAlertAction *action1 = [UIAlertAction actionWithTitle:NSLocalizedString(@"YES", nil) style:UIAlertActionStyleDestructive handler:^(UIAlertAction *action) {
+        self.dayEntity.breakfast = nil;
+        self.dayEntity.secondBreakfast = nil;
+        self.dayEntity.lunch = nil;
+        self.dayEntity.snack = nil;
+        self.dayEntity.dinner = nil;
+        
+        [self.dayEntity pinInBackgroundWithBlock:^(BOOL succeeded, NSError * _Nullable error) {
+            [self.collectionView reloadData];
+        }];
+    }];
+    
+    UIAlertAction *action2 = [UIAlertAction actionWithTitle:NSLocalizedString(@"NO", nil) style:UIAlertActionStyleCancel handler:^(UIAlertAction *action) {
+        
+    }];
+    
+    [alertController addAction:action1];
+    [alertController addAction:action2];
+    
+    [self.planViewController presentViewController:alertController animated:YES completion:nil];
+}
+
+- (CGSize)collectionView:(UICollectionView *)collectionView layout:(UICollectionViewLayout *)collectionViewLayout sizeForItemAtIndexPath:(NSIndexPath *)indexPath {
     if (IS_IPHONE_4_OR_LESS || IS_IPHONE_5) {
         return CGSizeMake(self.collectionView.frame.size.width / 1.7f, 211.0f);
     }
     return CGSizeMake(self.collectionView.frame.size.width / 2.3f, 211.0f);
 }
 
-- (UIEdgeInsets)collectionView:(UICollectionView *)collectionView layout:(UICollectionViewLayout*)collectionViewLayout insetForSectionAtIndex:(NSInteger)section{
+- (UIEdgeInsets)collectionView:(UICollectionView *)collectionView layout:(UICollectionViewLayout *)collectionViewLayout insetForSectionAtIndex:(NSInteger)section{
     return UIEdgeInsetsMake(0.0f, 5.0f, 0.0f, 5.0f);
 }
 
