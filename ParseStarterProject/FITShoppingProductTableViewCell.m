@@ -11,6 +11,8 @@
 @implementation FITShoppingProductTableViewCell
 
 - (void)awakeFromNib {
+    [super awakeFromNib];
+    
     self.separator.backgroundColor = [UIColor lightGrayColor];
 }
 

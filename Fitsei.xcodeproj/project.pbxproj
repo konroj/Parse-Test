@@ -33,6 +33,7 @@
 		743D7B6D157DA60100084B67 /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 743D7B6C157DA60100084B67 /* CoreGraphics.framework */; };
 		7920214B1BB7D0CD00B9E056 /* FITDishSelectionViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 7920214A1BB7D0CC00B9E056 /* FITDishSelectionViewController.m */; settings = {ASSET_TAGS = (); }; };
 		794D07121BBD33740032E034 /* FITOperationQueue.m in Sources */ = {isa = PBXBuildFile; fileRef = 794D07111BBD33740032E034 /* FITOperationQueue.m */; settings = {ASSET_TAGS = (); }; };
+		794D07161BBD373C0032E034 /* FITSetSelectionViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 794D07151BBD373C0032E034 /* FITSetSelectionViewController.m */; settings = {ASSET_TAGS = (); }; };
 		797ED7F61BB5BFC8004420AC /* FITHomeCollectionViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 797ED7F51BB5BFC8004420AC /* FITHomeCollectionViewCell.m */; settings = {ASSET_TAGS = (); }; };
 		797ED7FA1BB5E663004420AC /* FITHomeFlowLayout.m in Sources */ = {isa = PBXBuildFile; fileRef = 797ED7F91BB5E663004420AC /* FITHomeFlowLayout.m */; settings = {ASSET_TAGS = (); }; };
 		797ED7FD1BB5F3A6004420AC /* UIColor+Hex.m in Sources */ = {isa = PBXBuildFile; fileRef = 797ED7FC1BB5F3A6004420AC /* UIColor+Hex.m */; settings = {ASSET_TAGS = (); }; };
@@ -124,6 +125,8 @@
 		7920214A1BB7D0CC00B9E056 /* FITDishSelectionViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FITDishSelectionViewController.m; sourceTree = "<group>"; };
 		794D07101BBD33740032E034 /* FITOperationQueue.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FITOperationQueue.h; sourceTree = "<group>"; };
 		794D07111BBD33740032E034 /* FITOperationQueue.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FITOperationQueue.m; sourceTree = "<group>"; };
+		794D07141BBD373C0032E034 /* FITSetSelectionViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FITSetSelectionViewController.h; sourceTree = "<group>"; };
+		794D07151BBD373C0032E034 /* FITSetSelectionViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FITSetSelectionViewController.m; sourceTree = "<group>"; };
 		797ED7F41BB5BFC8004420AC /* FITHomeCollectionViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FITHomeCollectionViewCell.h; sourceTree = "<group>"; };
 		797ED7F51BB5BFC8004420AC /* FITHomeCollectionViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FITHomeCollectionViewCell.m; sourceTree = "<group>"; };
 		797ED7F81BB5E663004420AC /* FITHomeFlowLayout.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FITHomeFlowLayout.h; sourceTree = "<group>"; };
@@ -316,6 +319,7 @@
 				797ED80E1BB64137004420AC /* ShoppingList */,
 				797ED81D1BB69A66004420AC /* Settings */,
 				797ED8251BB6B72E004420AC /* ProductDetail */,
+				794D07131BBD37160032E034 /* SetSelection */,
 				792021481BB7D03E00B9E056 /* DishSelection */,
 				79AAA7481BB842C70010ED38 /* NewDish */,
 			);
@@ -378,6 +382,15 @@
 				7920214A1BB7D0CC00B9E056 /* FITDishSelectionViewController.m */,
 			);
 			name = DishSelection;
+			sourceTree = "<group>";
+		};
+		794D07131BBD37160032E034 /* SetSelection */ = {
+			isa = PBXGroup;
+			children = (
+				794D07141BBD373C0032E034 /* FITSetSelectionViewController.h */,
+				794D07151BBD373C0032E034 /* FITSetSelectionViewController.m */,
+			);
+			name = SetSelection;
 			sourceTree = "<group>";
 		};
 		797ED7F71BB5BFCC004420AC /* Cell */ = {
@@ -768,6 +781,7 @@
 				797ED8181BB653D7004420AC /* FITShoppingHeaderView.m in Sources */,
 				24DF63E61BB5615B00A1B62F /* FITHomeViewController.m in Sources */,
 				79810D661BBA699900A5D5C0 /* FITHomeEmptyCollectionViewCell.m in Sources */,
+				794D07161BBD373C0032E034 /* FITSetSelectionViewController.m in Sources */,
 				797ED8111BB64153004420AC /* FITShoppingViewController.m in Sources */,
 				7996810A1BB880950043D34C /* FITBigDishSelectionCollectionViewCell.m in Sources */,
 				797ED8001BB5FDA5004420AC /* FITLogoTableViewCell.m in Sources */,
