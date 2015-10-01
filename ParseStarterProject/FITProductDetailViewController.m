@@ -37,8 +37,10 @@
     [SVProgressHUD showWithStatus:NSLocalizedString(@"Heating proteins...", nil) maskType:SVProgressHUDMaskTypeGradient];
     
     __weak __typeof__(self) weakSelf = self;
-    dispatch_async(dispatch_get_global_queue(DISPATCH_QUEUE_PRIORITY_DEFAULT, 0), ^{
-        for (FITProductEntity *product in self.dishEntity.products) {
+    [FITOperationQueue asyncOperation:^{
+        __strong __typeof(weakSelf)strongSelf = weakSelf;
+        
+        for (FITProductEntity *product in strongSelf.dishEntity.products) {
             if ([product isDataAvailable]) {
                 [product fetchFromLocalDatastore];
             } else {
@@ -46,12 +48,13 @@
                 [PFObject pinAll:@[product]];
             }
         }
-        dispatch_async(dispatch_get_main_queue(), ^{
-            self.isLoadingObjects = NO;
-            [weakSelf.tableView reloadData];
-            [SVProgressHUD dismiss];
-        });
-    });
+
+    } successful:^{
+        __strong __typeof(weakSelf)strongSelf = weakSelf;
+        
+        strongSelf.isLoadingObjects = NO;
+        [strongSelf.tableView reloadData];
+    }];
 }
 
 - (void)viewWillDisappear:(BOOL)animated {

@@ -61,15 +61,16 @@ static NSUInteger const ANIMATION_SPEED = 1.0f;
     self.dataLoaded = NO;
     self.kcalLabel.text = NSLocalizedString(@"Calculating...", nil);
     
-    [SVProgressHUD showWithStatus:NSLocalizedString(@"Heating proteins...", nil) maskType:SVProgressHUDMaskTypeGradient];
     __weak __typeof__(self) weakSelf = self;
-    dispatch_async(dispatch_get_global_queue(DISPATCH_QUEUE_PRIORITY_DEFAULT, 0), ^{
-        NSArray *arrayDiet = [weakSelf.presenter fetchDiet];
-
-        weakSelf.dataList = [weakSelf dishArrayFromDayEntity:arrayDiet[0]];
-        weakSelf.isDishTommorow = [weakSelf isDishInEntity:arrayDiet[1]];
+    [FITOperationQueue asyncOperation:^{
+        __strong __typeof(weakSelf)strongSelf = weakSelf;
         
-        for (FITDishEntity *dish in weakSelf.dataList) {
+        NSArray *arrayDiet = [strongSelf.presenter fetchDiet];
+        
+        strongSelf.dataList = [strongSelf dishArrayFromDayEntity:arrayDiet[0]];
+        strongSelf.isDishTommorow = [strongSelf isDishInEntity:arrayDiet[1]];
+        
+        for (FITDishEntity *dish in strongSelf.dataList) {
             if ([dish isDataAvailable]) {
                 [dish fetchFromLocalDatastore];
             } else {
@@ -77,13 +78,13 @@ static NSUInteger const ANIMATION_SPEED = 1.0f;
                 [PFObject pinAll:@[dish]];
             }
         }
-        dispatch_async(dispatch_get_main_queue(), ^{
-            [weakSelf calculateTotalKcal];
-            weakSelf.dataLoaded = YES;
-            [weakSelf.collectionView reloadData];
-            [SVProgressHUD dismiss];
-        });
-    });
+    } successful:^{
+        __strong __typeof(weakSelf)strongSelf = weakSelf;
+        
+        [strongSelf calculateTotalKcal];
+        strongSelf.dataLoaded = YES;
+        [strongSelf.collectionView reloadData];
+    }];
 }
 
 - (void)viewDidAppear:(BOOL)animated {
@@ -140,7 +141,7 @@ static NSUInteger const ANIMATION_SPEED = 1.0f;
 }
 
 - (void)collectionView:(UICollectionView *)collectionView didSelectItemAtIndexPath:(NSIndexPath *)indexPath {
-    if (!self.dataLoaded || !self.dataList.count || self.isDishTommorow) {
+    if (!self.dataLoaded || !self.dataList.count || (self.isDishTommorow && !self.dataList.count)) {
         return;
     }
     

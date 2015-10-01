@@ -25,6 +25,7 @@
 #import <AFNetworking/UIImageView+AFNetworking.h>
 #import <SVProgressHUD/SVProgressHUD.h>
 
+#import "FITOperationQueue.h"
 #import "FITProductEntity.h"
 #import "FITDishEntity.h"
 #import "FITDayEntity.h"

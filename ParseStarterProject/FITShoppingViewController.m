@@ -36,17 +36,19 @@
     self.presenter = [FITShoppingListPresenter new];
     
     self.isLoading = YES;
-    [SVProgressHUD showWithStatus:NSLocalizedString(@"Heating proteins...", nil) maskType:SVProgressHUDMaskTypeGradient];
+    
     __weak __typeof__(self) weakSelf = self;
-    dispatch_async(dispatch_get_global_queue(DISPATCH_QUEUE_PRIORITY_DEFAULT, 0), ^{
-        weakSelf.productsDictionary = [self.presenter fetchShoppingListForTommorow];
-        weakSelf.filteredDictionary = [M13MutableOrderedDictionary orderedDictionaryWithOrderedDictionary:self.productsDictionary];
-        dispatch_async(dispatch_get_main_queue(), ^{
-            [SVProgressHUD dismiss];
-            self.isLoading = NO;
-            [weakSelf.tableView reloadData];
-        });
-    });
+    [FITOperationQueue asyncOperation:^{
+        __strong __typeof(weakSelf)strongSelf = weakSelf;
+        
+        strongSelf.productsDictionary = [strongSelf.presenter fetchShoppingListForTommorow];
+        strongSelf.filteredDictionary = [M13MutableOrderedDictionary orderedDictionaryWithOrderedDictionary:strongSelf.productsDictionary];
+    } successful:^{
+        __strong __typeof(weakSelf)strongSelf = weakSelf;
+        
+        strongSelf.isLoading = NO;
+        [strongSelf.tableView reloadData];
+    }];
 }
 
 - (void)viewWillAppear:(BOOL)animated {
