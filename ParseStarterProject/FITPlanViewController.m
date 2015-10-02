@@ -15,7 +15,7 @@
 #import "FITDietPlanPresenter.h"
 #import "FITDishSelectionViewController.h"
 
-@interface FITPlanViewController() <UICollectionViewDataSource, UICollectionViewDelegate, LeftMenuDelegate, RightMenuDelegate, BigCollectionCellDelegate>
+@interface FITPlanViewController() <UICollectionViewDataSource, UICollectionViewDelegate, RightMenuDelegate, BigCollectionCellDelegate>
 @property (weak, nonatomic) IBOutlet NSLayoutConstraint *topConstraint;
 @property (weak, nonatomic) IBOutlet UICollectionView *collectionView;
 @property (weak, nonatomic) IBOutlet UIImageView *background;
@@ -27,17 +27,15 @@
 
 @implementation FITPlanViewController
 
-- (void)awakeFromNib {
-    ((FITDrawerViewController *)FITMainViewController).leftViewController.delegate = self;
-    ((FITDrawerViewController *)FITMainViewController).rightViewController.delegate = self;
-    [self addTwoBarRight];
-}
-
 - (void)viewDidLoad {
     [super viewDidLoad];
     
     self.presenter = [FITDietPlanPresenter new];
     [self loadDatesForWeek:0];
+    
+    ((FITDrawerViewController *)FITMainViewController).leftViewController.delegate = self;
+    ((FITDrawerViewController *)FITMainViewController).rightViewController.delegate = self;
+    [self addTwoBarRight];
     
     self.view.backgroundColor = [UIColor colorWithHex:@"#41c0c0"];
 }
@@ -143,11 +141,6 @@
     
     targetContentOffset->y = currentOffset;
     [scrollView setContentOffset:CGPointMake(0, newTargetOffset) animated:YES];
-}
-
-- (void)willReplaceViewController {
-    [[UIApplication sharedApplication] setStatusBarStyle:UIStatusBarStyleLightContent];
-    [((FITNavigationViewController *)self.navigationController) animateNavigationBarTintToColor:[UIColor whiteColor] duration:0.4f];
 }
 
 - (void)viewWillDisappear:(BOOL)animated {

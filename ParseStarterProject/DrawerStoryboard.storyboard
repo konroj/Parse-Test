@@ -516,7 +516,7 @@
                                                                 </imageView>
                                                             </subviews>
                                                             <animations/>
-                                                            <color key="backgroundColor" red="0.60392159223556519" green="0.90588241815567017" blue="0.53333336114883423" alpha="1" colorSpace="deviceRGB"/>
+                                                            <color key="backgroundColor" red="0.082161732017993927" green="0.81259697675704956" blue="0.33037817478179932" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                                             <color key="tintColor" red="0.81176470590000005" green="0.0" blue="0.058823529409999999" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                                             <constraints>
                                                                 <constraint firstAttribute="width" constant="80" id="1jY-yc-MDb"/>
@@ -1308,6 +1308,32 @@
                                         <connections>
                                             <outlet property="textView" destination="5Tk-0S-xC1" id="Il7-JU-k2Q"/>
                                             <outlet property="titleLabel" destination="0Oq-zp-Tdv" id="QC0-88-Vf4"/>
+                                        </connections>
+                                    </tableViewCell>
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="NewDishCell" rowHeight="52" id="992-AX-zo8" customClass="FITNewDishTableViewCell">
+                                        <rect key="frame" x="0.0" y="216" width="600" height="52"/>
+                                        <autoresizingMask key="autoresizingMask"/>
+                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="992-AX-zo8" id="32v-en-YFb">
+                                            <rect key="frame" x="0.0" y="0.0" width="600" height="51.5"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                            <subviews>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ow5-TO-ZgV">
+                                                    <rect key="frame" x="8" y="8" width="42" height="21"/>
+                                                    <animations/>
+                                                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                    <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                            </subviews>
+                                            <animations/>
+                                            <constraints>
+                                                <constraint firstItem="ow5-TO-ZgV" firstAttribute="leading" secondItem="32v-en-YFb" secondAttribute="leading" constant="8" id="KCf-9D-V50"/>
+                                                <constraint firstItem="ow5-TO-ZgV" firstAttribute="top" secondItem="32v-en-YFb" secondAttribute="top" constant="8" id="dbb-1t-Q1A"/>
+                                            </constraints>
+                                        </tableViewCellContentView>
+                                        <animations/>
+                                        <connections>
+                                            <outlet property="titleLabel" destination="ow5-TO-ZgV" id="okh-Jh-NYa"/>
                                         </connections>
                                     </tableViewCell>
                                 </prototypes>
