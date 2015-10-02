@@ -10,6 +10,9 @@
 
 @interface FITSetEntity : PFObject <PFSubclassing>
 
+@property (strong, nonatomic) NSString *title;
+@property (strong, nonatomic) NSNumber *kcal;
+@property (strong, nonatomic) NSString *textDescripion;
 @property (strong, nonatomic) NSArray *days;
 
 @end

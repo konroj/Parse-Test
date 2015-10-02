@@ -1268,8 +1268,8 @@
                         <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="124" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="kbf-KP-Yzr">
-                                <rect key="frame" x="0.0" y="64" width="600" height="493"/>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" misplaced="YES" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="124" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="kbf-KP-Yzr">
+                                <rect key="frame" x="0.0" y="103" width="600" height="454"/>
                                 <animations/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 <prototypes>
@@ -1310,32 +1310,6 @@
                                             <outlet property="titleLabel" destination="0Oq-zp-Tdv" id="QC0-88-Vf4"/>
                                         </connections>
                                     </tableViewCell>
-                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="NewDishCell" rowHeight="52" id="992-AX-zo8" customClass="FITNewDishTableViewCell">
-                                        <rect key="frame" x="0.0" y="216" width="600" height="52"/>
-                                        <autoresizingMask key="autoresizingMask"/>
-                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="992-AX-zo8" id="32v-en-YFb">
-                                            <rect key="frame" x="0.0" y="0.0" width="600" height="51.5"/>
-                                            <autoresizingMask key="autoresizingMask"/>
-                                            <subviews>
-                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ow5-TO-ZgV">
-                                                    <rect key="frame" x="8" y="8" width="42" height="21"/>
-                                                    <animations/>
-                                                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                                    <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
-                                                    <nil key="highlightedColor"/>
-                                                </label>
-                                            </subviews>
-                                            <animations/>
-                                            <constraints>
-                                                <constraint firstItem="ow5-TO-ZgV" firstAttribute="leading" secondItem="32v-en-YFb" secondAttribute="leading" constant="8" id="KCf-9D-V50"/>
-                                                <constraint firstItem="ow5-TO-ZgV" firstAttribute="top" secondItem="32v-en-YFb" secondAttribute="top" constant="8" id="dbb-1t-Q1A"/>
-                                            </constraints>
-                                        </tableViewCellContentView>
-                                        <animations/>
-                                        <connections>
-                                            <outlet property="titleLabel" destination="ow5-TO-ZgV" id="okh-Jh-NYa"/>
-                                        </connections>
-                                    </tableViewCell>
                                 </prototypes>
                                 <connections>
                                     <outlet property="dataSource" destination="CZu-1s-WLE" id="5MT-VZ-doH"/>
@@ -1354,15 +1328,50 @@
                                     <action selector="addButtonAction:" destination="CZu-1s-WLE" eventType="touchUpInside" id="JdV-BC-Loq"/>
                                 </connections>
                             </button>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="E3K-rv-9d2">
+                                <rect key="frame" x="7" y="64" width="46" height="30"/>
+                                <animations/>
+                                <state key="normal" title="PN"/>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="wzc-0c-J8G">
+                                <rect key="frame" x="61" y="64" width="46" height="30"/>
+                                <animations/>
+                                <state key="normal" title="WT"/>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Byq-7D-W94">
+                                <rect key="frame" x="115" y="65" width="46" height="30"/>
+                                <animations/>
+                                <state key="normal" title="SR"/>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ByE-e3-Sw1">
+                                <rect key="frame" x="169" y="65" width="46" height="30"/>
+                                <animations/>
+                                <state key="normal" title="CZW"/>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="KE9-o4-O5K">
+                                <rect key="frame" x="223" y="65" width="46" height="30"/>
+                                <animations/>
+                                <state key="normal" title="PT"/>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="9E0-Ep-EpW">
+                                <rect key="frame" x="277" y="65" width="46" height="30"/>
+                                <animations/>
+                                <state key="normal" title="SB"/>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="rZp-0k-MZP">
+                                <rect key="frame" x="331" y="65" width="46" height="30"/>
+                                <animations/>
+                                <state key="normal" title="ND"/>
+                            </button>
                         </subviews>
                         <animations/>
-                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <color key="backgroundColor" white="0.66666666666666663" alpha="1" colorSpace="calibratedWhite"/>
                         <constraints>
                             <constraint firstItem="FSx-Y2-PMn" firstAttribute="centerX" secondItem="QyE-HL-njr" secondAttribute="centerX" id="5P3-7L-0s5"/>
                             <constraint firstItem="rHn-ID-5Ab" firstAttribute="top" secondItem="kbf-KP-Yzr" secondAttribute="bottom" constant="43" id="7Rf-yR-3Qd"/>
                             <constraint firstItem="kbf-KP-Yzr" firstAttribute="leading" secondItem="QyE-HL-njr" secondAttribute="leading" id="GSK-Zr-qz6"/>
                             <constraint firstItem="rHn-ID-5Ab" firstAttribute="top" secondItem="FSx-Y2-PMn" secondAttribute="bottom" constant="5" id="NyH-xN-j6M"/>
-                            <constraint firstItem="kbf-KP-Yzr" firstAttribute="top" secondItem="QyE-HL-njr" secondAttribute="top" constant="64" id="rNB-Au-i8u"/>
+                            <constraint firstItem="kbf-KP-Yzr" firstAttribute="top" secondItem="QyE-HL-njr" secondAttribute="top" constant="90" id="rNB-Au-i8u"/>
                             <constraint firstAttribute="trailing" secondItem="kbf-KP-Yzr" secondAttribute="trailing" id="wBX-0v-lS5"/>
                         </constraints>
                     </view>
