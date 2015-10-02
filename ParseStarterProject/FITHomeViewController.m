@@ -33,17 +33,14 @@ static NSUInteger const ANIMATION_SPEED = 1.0f;
 
 @implementation FITHomeViewController
 
-- (void)awakeFromNib {
-    self.collectionView.backgroundColor = [UIColor clearColor];
-    [self addNavigationBarRight];
-
-    self.isfirstTimeTransform = YES;
-    self.currentCellIndex = 0;
-}
-
 - (void)viewDidLoad {
     [super viewDidLoad];
     
+    self.collectionView.backgroundColor = [UIColor clearColor];
+    [self addNavigationBarRight];
+    
+    self.isfirstTimeTransform = YES;
+    self.currentCellIndex = 0;
     self.todayLabel.text = NSLocalizedString(@"Today", nil);
     
 #ifdef DEBUG
@@ -265,7 +262,7 @@ static NSUInteger const ANIMATION_SPEED = 1.0f;
 }
 
 - (void)didSelectChooseButton:(FITHomeEmptyCollectionViewCell *)cell {
-    
+    [self performSegueWithIdentifier:FromHomeToSetSegue sender:nil];
 }
 
 - (void)didSelectPlanButton:(FITHomeEmptyCollectionViewCell *)cell {

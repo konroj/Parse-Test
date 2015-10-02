@@ -34,6 +34,8 @@
 		7920214B1BB7D0CD00B9E056 /* FITDishSelectionViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 7920214A1BB7D0CC00B9E056 /* FITDishSelectionViewController.m */; settings = {ASSET_TAGS = (); }; };
 		794D07121BBD33740032E034 /* FITOperationQueue.m in Sources */ = {isa = PBXBuildFile; fileRef = 794D07111BBD33740032E034 /* FITOperationQueue.m */; settings = {ASSET_TAGS = (); }; };
 		794D07161BBD373C0032E034 /* FITSetSelectionViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 794D07151BBD373C0032E034 /* FITSetSelectionViewController.m */; settings = {ASSET_TAGS = (); }; };
+		794D07191BBD3D0A0032E034 /* FITSetTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 794D07181BBD3D0A0032E034 /* FITSetTableViewCell.m */; settings = {ASSET_TAGS = (); }; };
+		794D071D1BBE50580032E034 /* FITSetEntity.m in Sources */ = {isa = PBXBuildFile; fileRef = 794D071C1BBE50580032E034 /* FITSetEntity.m */; settings = {ASSET_TAGS = (); COMPILER_FLAGS = "-w"; }; };
 		797ED7F61BB5BFC8004420AC /* FITHomeCollectionViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 797ED7F51BB5BFC8004420AC /* FITHomeCollectionViewCell.m */; settings = {ASSET_TAGS = (); }; };
 		797ED7FA1BB5E663004420AC /* FITHomeFlowLayout.m in Sources */ = {isa = PBXBuildFile; fileRef = 797ED7F91BB5E663004420AC /* FITHomeFlowLayout.m */; settings = {ASSET_TAGS = (); }; };
 		797ED7FD1BB5F3A6004420AC /* UIColor+Hex.m in Sources */ = {isa = PBXBuildFile; fileRef = 797ED7FC1BB5F3A6004420AC /* UIColor+Hex.m */; settings = {ASSET_TAGS = (); }; };
@@ -127,6 +129,10 @@
 		794D07111BBD33740032E034 /* FITOperationQueue.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FITOperationQueue.m; sourceTree = "<group>"; };
 		794D07141BBD373C0032E034 /* FITSetSelectionViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FITSetSelectionViewController.h; sourceTree = "<group>"; };
 		794D07151BBD373C0032E034 /* FITSetSelectionViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FITSetSelectionViewController.m; sourceTree = "<group>"; };
+		794D07171BBD3D0A0032E034 /* FITSetTableViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FITSetTableViewCell.h; sourceTree = "<group>"; };
+		794D07181BBD3D0A0032E034 /* FITSetTableViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FITSetTableViewCell.m; sourceTree = "<group>"; };
+		794D071B1BBE50580032E034 /* FITSetEntity.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FITSetEntity.h; sourceTree = "<group>"; };
+		794D071C1BBE50580032E034 /* FITSetEntity.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FITSetEntity.m; sourceTree = "<group>"; };
 		797ED7F41BB5BFC8004420AC /* FITHomeCollectionViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FITHomeCollectionViewCell.h; sourceTree = "<group>"; };
 		797ED7F51BB5BFC8004420AC /* FITHomeCollectionViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FITHomeCollectionViewCell.m; sourceTree = "<group>"; };
 		797ED7F81BB5E663004420AC /* FITHomeFlowLayout.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FITHomeFlowLayout.h; sourceTree = "<group>"; };
@@ -387,10 +393,20 @@
 		794D07131BBD37160032E034 /* SetSelection */ = {
 			isa = PBXGroup;
 			children = (
+				794D071A1BBD3D0F0032E034 /* Cell */,
 				794D07141BBD373C0032E034 /* FITSetSelectionViewController.h */,
 				794D07151BBD373C0032E034 /* FITSetSelectionViewController.m */,
 			);
 			name = SetSelection;
+			sourceTree = "<group>";
+		};
+		794D071A1BBD3D0F0032E034 /* Cell */ = {
+			isa = PBXGroup;
+			children = (
+				794D07171BBD3D0A0032E034 /* FITSetTableViewCell.h */,
+				794D07181BBD3D0A0032E034 /* FITSetTableViewCell.m */,
+			);
+			name = Cell;
 			sourceTree = "<group>";
 		};
 		797ED7F71BB5BFCC004420AC /* Cell */ = {
@@ -539,6 +555,8 @@
 				79AAA73B1BB82DC50010ED38 /* FITProductEntity.m */,
 				79AAA7531BB85DDA0010ED38 /* FITDayEntity.h */,
 				79AAA7541BB85DDA0010ED38 /* FITDayEntity.m */,
+				794D071B1BBE50580032E034 /* FITSetEntity.h */,
+				794D071C1BBE50580032E034 /* FITSetEntity.m */,
 			);
 			name = Parse;
 			sourceTree = "<group>";
@@ -775,6 +793,7 @@
 				24DF63DE1BB5606D00A1B62F /* FITLeftMenuTableViewCell.m in Sources */,
 				799681071BB874070043D34C /* FITEmptyPlanCollectionViewCell.m in Sources */,
 				79AAA7551BB85DDA0010ED38 /* FITDayEntity.m in Sources */,
+				794D07191BBD3D0A0032E034 /* FITSetTableViewCell.m in Sources */,
 				797ED7FA1BB5E663004420AC /* FITHomeFlowLayout.m in Sources */,
 				7996810D1BB880B30043D34C /* FITBigDishSelectionFlowLayout.m in Sources */,
 				79AAA7471BB841550010ED38 /* FITHomePresenter.m in Sources */,
@@ -785,6 +804,7 @@
 				797ED8111BB64153004420AC /* FITShoppingViewController.m in Sources */,
 				7996810A1BB880950043D34C /* FITBigDishSelectionCollectionViewCell.m in Sources */,
 				797ED8001BB5FDA5004420AC /* FITLogoTableViewCell.m in Sources */,
+				794D071D1BBE50580032E034 /* FITSetEntity.m in Sources */,
 				7920214B1BB7D0CD00B9E056 /* FITDishSelectionViewController.m in Sources */,
 				24DF63ED1BB5736200A1B62F /* FITBaseViewController.m in Sources */,
 				24DF63D91BB55F7A00A1B62F /* FITRightMenuViewController.m in Sources */,
