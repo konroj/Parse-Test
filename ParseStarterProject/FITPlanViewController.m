@@ -81,6 +81,7 @@
     cell.dayEntity = self.dayList[indexPath.item];
     cell.delegate = self;
     cell.planViewController = self;
+    cell.deleteButton.hidden = [cell isDayEmpty];
     
     [cell.collectionView reloadData];
     

@@ -26,4 +26,6 @@
 
 @property (strong, nonatomic) FITDayEntity *dayEntity;
 
+- (BOOL)isDayEmpty;
+
 @end

@@ -114,6 +114,7 @@
     }
     
     [self.dayEntity pinInBackgroundWithBlock:^(BOOL succeeded, NSError * _Nullable error) {
+        self.deleteButton.hidden = [self isDayEmpty];
         [self.collectionView reloadData];
     }];
 }
@@ -121,6 +122,7 @@
 - (void)didSelectEditOption:(FITSmallPlanCollectionViewCell *)cell {
     NSIndexPath *indexPath = [self.collectionView indexPathForCell:cell];
     if ([self.delegate respondsToSelector:@selector(didSelectBigCell:smallIndexPath:)]) {
+        self.deleteButton.hidden = [self isDayEmpty];
         [self.delegate didSelectBigCell:self smallIndexPath:indexPath];
     }
     
@@ -138,6 +140,7 @@
         self.dayEntity.dinner = nil;
         
         [self.dayEntity pinInBackgroundWithBlock:^(BOOL succeeded, NSError * _Nullable error) {
+            self.deleteButton.hidden = [self isDayEmpty];
             [self.collectionView reloadData];
         }];
     }];
@@ -219,6 +222,10 @@
     }
     
     return nil;
+}
+
+- (BOOL)isDayEmpty {
+    return !(self.dayEntity.breakfast || self.dayEntity.secondBreakfast || self.dayEntity.lunch || self.dayEntity.snack || self.dayEntity.dinner);
 }
 
 @end
