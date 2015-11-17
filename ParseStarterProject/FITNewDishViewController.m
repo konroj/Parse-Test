@@ -9,9 +9,12 @@
 #import "FITNewDishViewController.h"
 #import "FITNewDishTableViewCell.h"
 #import "FITNavigationViewController.h"
+#import "FITNewProductTableViewCell.h"
 
-@interface FITNewDishViewController () <UITableViewDataSource, UITableViewDelegate>
+@interface FITNewDishViewController () <UITableViewDataSource, UITableViewDelegate, NewProductDelegate>
 @property (weak, nonatomic) IBOutlet UITableView *tableView;
+
+@property (strong, nonatomic) NSMutableArray *products;
 @end
 
 @implementation FITNewDishViewController
@@ -30,7 +33,7 @@
 }
 
 - (IBAction)addButtonAction:(id)sender {
-    
+    [self.navigationController popViewControllerAnimated:YES];
 }
 
 - (NSInteger)numberOfSectionsInTableView:(UITableView *)tableView {
@@ -38,63 +41,70 @@
 }
 
 - (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section {
-    return 11 + 10;
+    return 11 + self.products.count;
 }
 
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath {
-    FITNewDishTableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:@"NewDishCell" forIndexPath:indexPath];
+    UITableViewCell *cell;
     
     if (indexPath.row < 11) {
+        FITNewDishTableViewCell *dishCell = [tableView dequeueReusableCellWithIdentifier:@"NewDishCell" forIndexPath:indexPath];
+        
         switch (indexPath.row) {
             case 0: {
-                cell.titleLabel.text = @"Typ żywności";
+                dishCell.titleLabel.text = @"Typ żywności";
                 break;
             }
             case 1: {
-                cell.titleLabel.text = @"Typ posiłku";
+                dishCell.titleLabel.text = @"Typ posiłku";
                 break;
             }
             case 2: {
-                cell.titleLabel.text = @"Nazwa PL";
+                dishCell.titleLabel.text = @"Nazwa PL";
                 break;
             }
             case 3: {
-                cell.titleLabel.text = @"Nazwa EN";
+                dishCell.titleLabel.text = @"Nazwa EN";
                 break;
             }
             case 4: {
-                cell.titleLabel.text = @"URL";
+                dishCell.titleLabel.text = @"URL";
                 break;
             }
             case 5: {
-                cell.titleLabel.text = @"Opis PL";
+                dishCell.titleLabel.text = @"Opis PL";
                 break;
             }
             case 6: {
-                cell.titleLabel.text = @"Opis EN";
+                dishCell.titleLabel.text = @"Opis EN";
                 break;
             }
             case 7: {
-                cell.titleLabel.text = @"Białko";
+                dishCell.titleLabel.text = @"Białko";
                 break;
             }
             case 8: {
-                cell.titleLabel.text = @"Węgle";
+                dishCell.titleLabel.text = @"Węgle";
                 break;
             }
             case 9: {
-                cell.titleLabel.text = @"Tłuszcz";
+                dishCell.titleLabel.text = @"Tłuszcz";
                 break;
             }
             case 10: {
-                cell.titleLabel.text = @"KCAL";
+                dishCell.titleLabel.text = @"KCAL";
                 break;
             }
             default:
                 break;
         }
+        
+        cell = dishCell;
     } else {
-        cell.titleLabel.text = [NSString stringWithFormat:@"Produkt %d", indexPath.row - 10];
+        FITNewProductTableViewCell *productCell = [tableView dequeueReusableCellWithIdentifier:@"NewProductCell" forIndexPath:indexPath];
+        productCell.titleLabel.text = [NSString stringWithFormat:@"Produkt %ld", indexPath.row - 10];
+        
+        cell = productCell;
     }
     
     return cell;
@@ -102,7 +112,7 @@
 
 - (CGFloat)tableView:(UITableView *)tableView heightForRowAtIndexPath:(NSIndexPath *)indexPath {
     if (indexPath.row > 10) {
-        return 45;
+        return 65;
     }
     
     CGFloat size;
@@ -121,6 +131,10 @@
     }
     
     return size;
+}
+
+- (void)addNewProductCell:(id)sender {
+    [self.products addObject:[FITProductEntity new]];
 }
 
 - (void)viewWillDisappear:(BOOL)animated {

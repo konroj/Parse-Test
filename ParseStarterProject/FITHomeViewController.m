@@ -64,15 +64,17 @@ static NSUInteger const ANIMATION_SPEED = 1.0f;
         
         NSArray *arrayDiet = [strongSelf.presenter fetchDiet];
         
-        strongSelf.dataList = [strongSelf dishArrayFromDayEntity:arrayDiet[0]];
-        strongSelf.isDishTommorow = [strongSelf isDishInEntity:arrayDiet[1]];
-        
-        for (FITDishEntity *dish in strongSelf.dataList) {
-            if ([dish isDataAvailable]) {
-                [dish fetchFromLocalDatastore];
-            } else {
-                [dish fetchIfNeeded];
-                [PFObject pinAll:@[dish]];
+        if (arrayDiet.count == 2) {
+            strongSelf.dataList = [strongSelf dishArrayFromDayEntity:arrayDiet[0]];
+            strongSelf.isDishTommorow = [strongSelf isDishInEntity:arrayDiet[1]];
+            
+            for (FITDishEntity *dish in strongSelf.dataList) {
+                if ([dish isDataAvailable]) {
+                    [dish fetchFromLocalDatastore];
+                } else {
+                    [dish fetchIfNeeded];
+                    [PFObject pinAll:@[dish]];
+                }
             }
         }
     } successful:^{

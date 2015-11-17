@@ -11,7 +11,19 @@
 @implementation FITHomePresenter
 
 - (NSArray *)fetchDiet {
-    return @[[self fetchTodayDiet], [self fetchTommorowDiet]];
+    FITDayEntity *today = [self fetchTodayDiet];
+    FITDayEntity *tommorow = [self fetchTommorowDiet];
+    
+    NSMutableArray *mutableArray = [NSMutableArray new];
+    if (today) {
+        [mutableArray addObject:today];
+    }
+    
+    if (tommorow) {
+        [mutableArray addObject:tommorow];
+    }
+    
+    return [NSArray arrayWithArray:mutableArray];
 }
 
 - (FITDayEntity *)fetchTodayDiet {

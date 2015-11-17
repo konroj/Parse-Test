@@ -18,6 +18,7 @@
 @property (strong, nonatomic) M13MutableOrderedDictionary *filteredDictionary;
 @property (strong, nonatomic) FITShoppingListPresenter *presenter;
 @property (assign, nonatomic) BOOL isLoading;
+@property (assign, nonatomic) BOOL deletingLastCell;
 @end
 
 @implementation FITShoppingViewController
@@ -64,7 +65,7 @@
 }
 
 - (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section {
-    return self.filteredDictionary.allKeys.count ?: 1;
+    return self.filteredDictionary.allKeys.count ?: !self.deletingLastCell;
 }
 
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath {
@@ -129,7 +130,13 @@
 - (void)swipeableTableViewCell:(SWTableViewCell *)cell didTriggerRightUtilityButtonWithIndex:(NSInteger)index {
     NSIndexPath *indexPath = [self.tableView indexPathForCell:cell];
     [self.filteredDictionary removeEntryAtIndex:indexPath.row];
+    self.deletingLastCell = YES;
     [self.tableView deleteRowsAtIndexPaths:@[indexPath] withRowAnimation:UITableViewRowAnimationAutomatic];
+    if (!self.filteredDictionary.count) {
+        self.deletingLastCell = NO;
+        [self.tableView insertRowsAtIndexPaths:@[indexPath] withRowAnimation:UITableViewRowAnimationAutomatic];
+        [self.tableView reloadData];
+    }
 }
 
 @end
